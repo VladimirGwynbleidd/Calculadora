@@ -1,10 +1,24 @@
-﻿$('#btnCallModal').click(function () {
+﻿$('#btnResultados').click(function () {
+    LimpiarModal()
+})
+
+
+$('#btnMejorPension').click(function () {
+    LimpiarModal()
+})
+
+
+$('#btnSuficienteRetiro').click(function () {
+    LimpiarModal()
+})
+
+
+$('#btnPequenosEsfuerzos').click(function () {
     LimpiarModal()
 })
 
 
 $('#btnInfoBuena').click(function () {
-    LLamarOpcionSatisfaccion("InfoBuena")
     $('#InfoBuena').toggle();
     $('#InfoRegular').hide();
     $('#InfoBad').hide();
@@ -29,6 +43,10 @@ function LimpiarModal() {
     $('#InfoRegular').hide();
     $('#InfoBad').hide();
 }
+
+$('#btnEnviarEncuesta').click(function () {
+    LLamarOpcionSatisfaccion("InfoBuena")
+})
 
 function LLamarOpcionSatisfaccion(InformacionCarita) {
     var ValorCarita;
@@ -64,6 +82,12 @@ function LLamarOpcionSatisfaccion(InformacionCarita) {
         dataType: "json",
         success: function (data) {
             //alert('HOLA')
+            $("#modalConfirmacion").modal('show')
+            $("#ModalEncuestaSatisfaccion").modal('hide')
+
+            setTimeout(function () {
+                $("#ModalEncuestaSatisfaccion").modal('hide')
+            }, 4000);
 
 
         },

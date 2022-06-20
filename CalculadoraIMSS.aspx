@@ -82,7 +82,7 @@
     <script src="js/eventos.js"></script>
     <link href="css/Calendar.css" rel="stylesheet" />
     <script src="js/Chart.min.js"></script>
-    
+
     <%--    <script src="js/knockout-3.0.0.js"></script>
     <script src="js/globalize.min.js"></script>
     <script src="js/dx.chartjs.js"></script>--%>
@@ -1183,14 +1183,14 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Encuesta de Satisfacción</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Encuesta de satisfacción</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <fieldset>
-                        <legend class="label form-control clearfix" style="color: black; border: 0 none; width: 100%; white-space: normal; background-color: transparent; font-size: 18px; margin-bottom: 30px; font-weight: normal; box-shadow: inset 0 0 0 rgba(0,0,0,0)">¿Cómo fue tu experiencia al realizar este trámite o servicio?
+                        <legend class="label form-control clearfix" style="color: black; border: 0 none; width: 100%; white-space: normal; background-color: transparent; font-size: 18px; margin-bottom: 30px; font-weight: normal; box-shadow: inset 0 0 0 rgba(0,0,0,0)">¿Qué te parece esta herramienta?
                         </legend>
                         <div class="btn-group" style="font-weight: normal; width: 100%; margin-top: 25px; padding: 10px;">
                             <div class="col-sm-4">
@@ -1272,11 +1272,9 @@
                                 <div class="col-md-12 respuesta"></div>
                                 <div class="modal-footer">
                                     <div class="row" style="padding: 10px;" align="center">
-                                        <button type="button" class="btn btn-primary" onclick="surveyTramiteGobMX.saveInformation()">Enviar encuesta</button>
+                                        <button id="btnEnviarEncuesta" style="color: #fff; background-color: #9D2449; border-color: #9D2449;" type="button" class="btn btn-primary">Enviar encuesta</button>
                                     </div>
-                                    <div class="row" style="padding: 10px;" align="left">
-                                        <label id="msjEncuesta"></label>
-                                    </div>
+                                  
                                 </div>
                             </div>
 
@@ -1317,12 +1315,10 @@
                             <div class="form-group">
                                 <div class="col-md-12 respuesta"></div>
                                 <div class="modal-footer">
-                                    <div class="row" style="padding: 10px;" align="center">
-                                        <button type="button" class="btn btn-primary" onclick="surveyTramiteGobMX.saveInformation()">Enviar encuesta</button>
+                                      <div class="row" style="padding: 10px;" align="center">
+                                        <button style="color: #fff; background-color: #9D2449; border-color: #9D2449;" type="button" class="btn btn-primary">Enviar encuesta</button>
                                     </div>
-                                    <div class="row" style="padding: 10px;" align="left">
-                                        <label id="msjEncuesta2"></label>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -1363,27 +1359,56 @@
                             </fieldset>
 
                             <div class="form-group">
-                                <div class="col-md-12 respuesta"></div>
+                                <div class="col-md-12"></div>
                                 <div class="modal-footer">
                                     <div class="row" style="padding: 10px;" align="center">
-                                        <button type="button" class="btn btn-primary" onclick="surveyTramiteGobMX.saveInformation()">Enviar encuesta</button>
+                                        <button style="color: #fff; background-color: #9D2449; border-color: #9D2449;" type="button" class="btn btn-primary">Enviar encuesta</button>
                                     </div>
-                                    <div class="row" style="padding: 10px;" align="left">
-                                        <label id="msjEncuesta3"></label>
-                                    </div>
+                                  
                                 </div>
                             </div>
                         </div>
                     </fieldset>
 
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <%--                                                            <button type="button" class="btn btn-primary">Save changes</button>--%>
+                <div class="modal-footer" style="align-items: center">
+                    <%--<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>--%>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+    <!-- Modal Confirmacion-->
+    <div class="modal fade" id="modalConfirmacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <%--<div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel1">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>--%>
+                <div class="modal-body">
+                    <div class="modal-title" style="align-content: center">
+                        <div class="col-md-12"></div>
+
+                        <div class="row" style="padding: 10px;">
+                            <button style="color: #fff; background-color: #9D2449; border-color: #9D2449;" type="button" class="btn btn-primary">Enviar encuesta</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer btn-secondary" style="align-items: center">
+                    <fieldset>
+                        <legend style="font-size: medium">Gracias por compartir tu experiencia y ayudarnos a mejorar</legend>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script>
       
@@ -2051,7 +2076,7 @@
 
 
 
-                                            <button id="btnCallModal" type="button" data-toggle="modal" data-target="#ModalEncuestaSatisfaccion" style="float: right;">
+                                            <button id="btnResultados" type="button" data-toggle="modal" data-target="#ModalEncuestaSatisfaccion" style="float: right;">
                                                 <i class="bi bi-chat" style="font-size: 40px"></i>
                                                 <%--<img src="imagenes/IconsModal/Opinion.png" />--%>
                                             </button>
@@ -2229,7 +2254,7 @@
 
 
                                     <div style="text-align: right; padding-top: 10px;">
-                                        <button type="button" data-toggle="modal" data-target="#ModalEncuestaSatisfaccion" style="float: right;">
+                                        <button id="btnMejorPension" type="button" data-toggle="modal" data-target="#ModalEncuestaSatisfaccion" style="float: right;">
                                             <i class="bi bi-chat" style="font-size: 40px"></i>
                                         </button>
                                     </div>
@@ -2495,7 +2520,7 @@
                                             <td style="width: 30px; vertical-align: top;"></td>
                                             <td class="panelVisible">
                                                 <div style="text-align: right; padding-top: 10px;">
-                                                    <button type="button" data-toggle="modal" data-target="#ModalEncuestaSatisfaccion" style="float: right;">
+                                                    <button id="btnSuficienteRetiro" type="button" data-toggle="modal" data-target="#ModalEncuestaSatisfaccion" style="float: right;">
                                                         <i class="bi bi-chat" style="font-size: 40px"></i>
                                                     </button>
                                                 </div>
@@ -2572,7 +2597,7 @@
                                             </td>
                                             <td>
                                                 <div style="text-align: right; padding-top: 10px;">
-                                                    <button type="button" data-toggle="modal" data-target="#ModalEncuestaSatisfaccion">
+                                                    <button id="btnPequenosEsfuerzos" type="button" data-toggle="modal" data-target="#ModalEncuestaSatisfaccion">
                                                         <i class="bi bi-chat" style="font-size: 40px"></i>
                                                         <%--<img src="imagenes/IconsModal/Opinion.png" />--%>
                                                     </button>
@@ -2855,7 +2880,7 @@
 
 
     <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
-   
+
     <script src="js/ModalJS/ModalEncuesta.js"></script>
 </body>
 </html>
