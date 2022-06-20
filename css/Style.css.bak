@@ -1,0 +1,2374 @@
+﻿
+@font-face
+{
+	font-family: 'robotoregular';
+	src: url('../webfontkit/roboto-regular-webfont.eot');
+	src: url('../webfontkit/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../webfontkit/roboto-regular-webfont.woff2') format('woff2'), url('../webfontkit/roboto-regular-webfont.woff') format('woff'), url('../webfontkit/roboto-regular-webfont.ttf') format('truetype'), url('../webfontkit/roboto-regular-webfont.svg#robotoregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+a:link
+{
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+a:visited
+{
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+a:hover
+{
+	color: #ffffff;
+}
+
+a:active
+{
+	color: #ffffff;
+}
+
+
+
+#DVContenedorCalculadora
+{
+	width: 900px;
+	overflow: hidden;
+	background-color: transparent;
+	float: left;
+	margin-left: 40px;
+}
+
+#DVTextoTitulo
+{
+	width: 900px;
+	height: 100px;
+	text-align: center;
+	float: left;
+}
+
+.DVTextoTitulo
+{
+	width: 900px;
+	height: 220px;
+	text-align: center;
+	float: left;
+}
+
+#DVTextoTitulo p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	margin: 20px 20px 10px 20px;
+	text-align: justify;
+	color: #5b5656;
+}
+
+.DVTextoTitulo p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	margin: 20px 20px 10px 20px;
+	text-align: justify;
+	color: #5b5656;
+}
+
+
+.text_gral_center_Aportaciones
+{
+    text-align:center;
+}
+
+#DVIngresaDatos
+{
+	width: 900px;
+	height: 40px;
+	float: left;
+}
+
+	#DVIngresaDatos #imgIngresatusdatos
+	{
+		float: left;
+	}
+
+	#DVIngresaDatos #imgInstituto
+	{
+		float: right;
+		margin-right: 0px;
+	}
+
+	#DVIngresaDatos #cboTipoTrabajador
+	{
+		float: right;
+		height: 29px;
+		width: 200px;
+		font-family: robotoregular;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+#DVAfore
+{
+	width: 900px;
+	height: 80px;
+	float: left;
+	background-color: transparent;
+}
+
+	#DVAfore #imgAfore
+	{
+		float: left;
+		margin-top: 15px;
+	}
+
+	#DVAfore #cboAfore
+	{
+		float: left;
+		height: 29px;
+		width: 200px;
+		font-family: robotoregular;
+		font-size: 20px;
+		font-weight: bold;
+		margin-top: 15px;
+	}
+
+	#DVAfore #cobracomision
+	{
+		float: left;
+		margin-left: 200px;
+		font-family: robotoregular;
+		font-size: 15px;
+		font-weight: normal;
+		margin-top: 5px;
+		margin-top: 25px;
+		color: #5b5656;
+	}
+
+	#DVAfore #txtComisionAfore
+	{
+		float: left;
+		width: 120px;
+		height: 40px;
+		font-size: 30px;
+		font-weight: bold;
+		font-family: robotoregular;
+		border: none;
+		background-color: transparent;
+		text-align: right;
+		color: #0FAFAB;
+		margin-top: 16px;
+	}
+
+	#DVAfore #imgInformacion
+	{
+		float: right;
+		border: none;
+	}
+
+
+#DVTemasImportancia
+{
+	position: absolute;
+	top: 34px;
+	left: 668px;
+	width: 242px;
+	height: 31px;
+	background-image: url(../imagenes/desplegable_1.png);
+}
+
+	#DVTemasImportancia:hover
+	{
+		cursor: pointer;
+	}
+
+#DVTemasImportanciaDesplegable
+{
+	width: 242px;
+	height: 122px;
+	position: relative;
+	top: 34px;
+	left: 580px;
+	background-image: url(../imagenes/desplegable_2.png);
+	display: none;
+}
+
+#DVTemasImportanciaDesplegableIMSS
+{
+	width: 241px;
+	height: 93px;
+	position: absolute;
+	top: 34px;
+	left: 668px;
+	background-image: url(../imagenes/desplegable_2.png);
+	cursor: pointer;
+}
+
+
+#imgDesplegableTemasImportancia
+{
+	width: 242px;
+	height: 122px;
+	position: absolute;
+	top: 34px;
+	left: 668px;
+}
+
+#DVTemasImportanciaDesplegableINDI
+{
+	width: 242px;
+	height: 122px;
+	position: relative;
+	top: 34px;
+	left: 668px;
+	background-image: url(../imagenes/desplegable_2.png);
+	display: none;
+}
+
+#DVTemasImportanciaDesplegable a#link1
+{
+	width: 200px;
+	height: 25px;
+}
+
+
+#DVFondoDatos
+{
+	background-image: url(../imagenes/datos.png);
+	width: 900px;
+	height: 322px;
+	float: left;
+}
+
+	#DVFondoDatos img
+	{
+		border: none;
+	}
+
+	#DVFondoDatos input[type="text"]
+	{
+		width: 130px;
+		height: 25px;
+		text-align: center;
+		font-family: robotoregular;
+		font-size: 15px;
+		font-weight: bold;
+		margin-left: 18px;
+		margin-top: 21px;
+		color: #5b5656 !important;
+	}
+
+	#DVFondoDatos label
+	{
+		width: 170px;
+		text-align: right;
+		font-family: robotoregular;
+		font-size: 15px;
+		font-weight: normal;
+		margin-right: 15px;
+		color: #5b5656;
+	}
+
+.DensidadCotizacionIMSS
+{
+	margin-left: 100px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	margin-right: 15px;
+	color: #5b5656;
+}
+
+.DVFondoDatos-100
+{
+	width: 100%;
+	float: left;
+	height: 65px;
+}
+
+.DVFondoDatos-96
+{
+	width: 96%;
+	float: left;
+	height: 65px;
+}
+
+.DVFondoDatos-93
+{
+	width: 93%;
+	float: left;
+}
+
+.DVFondoDatos-50
+{
+	width: 50%;
+	float: left;
+	height: 65px;
+}
+
+.CTRLGeneral
+{
+	float: left;
+	margin-top: 10px;
+}
+
+
+.DVFondoEncabezadoIMSS
+{
+	width: 988px;
+	height: 96px;
+	float: left;
+	position: relative;
+}
+
+.DVFondoEncabezadoInicio
+{
+	background-image: url(../imagenes/encabezado_entrada.png);
+	width: 988px;
+	height: 84px;
+	float: left;
+}
+
+.DVFondoEncabezadoIndi
+{
+	width: 988px;
+	height: 100px;
+	float: left;
+}
+
+#DVPieTexto
+{
+	width: 60%;
+	float: left;
+}
+
+#DVPieTexto p
+{
+	text-align: justify;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	margin: 0px 10px 0px 25px;
+	color: #5b5656;
+}
+
+.PieTexto
+{
+	float: left;
+	text-align: justify;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	margin: 0px 10px 0px 25px;
+	color: #5b5656;
+}
+
+#DVCalcular
+{
+	width: 30%;
+	height: 50px;
+	float: right;
+}
+
+.btnCalcular
+{
+	float: right;
+	margin-bottom: 20px;
+}
+
+.slidergral
+{
+	margin-top: 23px;
+}
+
+
+
+
+/*ESTILO RESULTADO*/
+
+.ContenedorResultados
+{
+	width: 900px;
+	float: left;
+	margin-left: 40px;
+	background-color: transparent;
+}
+
+#DVResultadoAV_ODT100
+{
+	width: 650px;
+	overflow: hidden;
+	float: inherit;
+	margin-left: 182px;
+}
+
+#DVContenedorResultadoNP
+{
+	width: 900px;
+	overflow: hidden;
+	float: left;
+	margin-left: 40px;
+}
+
+#DVResultadoAVNP_ODT5
+{
+	width: 650px;
+	overflow: hidden;
+	float: inherit;
+	margin-left: 182px;
+}
+
+#DVDatosFormulario
+{
+	float: left;
+	background-image: url(../imagenes/menu_datos.png);
+	width: 100%;
+	border: none;
+	height: 80px;
+	background-repeat: no-repeat;
+}
+
+#DVDatosFormularioNP
+{
+	float: left;
+	width: 100%;
+	border: none;
+	height: 80px;
+}
+
+.DVDatosFormularioNP
+{
+	background-image: url(../imagenes/menu_datos.png);
+	background-repeat: no-repeat;
+}
+
+.DVDatosFormularioNP_ODT5
+{
+	background-image: url(../imagenes/menu_datos_ODT5_sd.png);
+	background-repeat: no-repeat;
+}
+
+#DVResultadoPMT
+{
+	width: 450px;
+	height: 186px;
+	background-image: url(../imagenes/resultado_medio-01.png);
+}
+
+#DVResultadoPMTNP
+{
+	width: 100%;
+	height: 60px;
+    background-image: url(../imagenes/SaldoAcumuladoAlRetiro.png);
+}
+
+#DVResultadoPMT_2
+{
+	float: left;
+	width: 100%;
+	height: 74px;
+}
+
+.DVResultadoPMT_2_1
+{
+	background-image: url(../imagenes/resultado_medio_4.png);
+}
+
+.DVResultadoPMT_2_2
+{
+	background-image: url(../imagenes/2_negativa-de-pension_ODT.png);
+}
+
+#DVResultadoPMT_2NP
+{
+	width: 100%;
+	height: 74px;
+    margin-top:15px;
+}
+
+.DVResultadoPMT_2NP
+{
+	background-image: url(../imagenes/2_negativa-de-pension.png);
+	background-repeat: no-repeat;
+}
+
+.DVResultadoPMT_2NP_ODT
+{
+	background-image: url(../imagenes/img_PT.png);
+	background-repeat: no-repeat;
+}
+
+#DVResultadoAV
+{
+	float: left;
+	width: 100%;
+	overflow: hidden;
+}
+
+#DVPMG
+{
+	float: left;
+	width: 100%;
+	overflow: hidden;
+}
+
+.gvAhorroVoluntario
+{
+	float: left;
+	margin-left: 0px;
+	margin-top: 0px;
+	width: 100%;
+}
+
+.EncResultados
+{
+	float: left;
+}
+
+#DVDatosProporcionadosNP
+{
+	float: left;
+}
+
+.EncResultados p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #0FAFAB;
+}
+
+.EncResultados 
+{
+    height:50px;
+    width:100%;
+    float:none;
+}
+
+.EncResultados p
+{
+    font-size: 15px;
+}
+
+#DVDatosProporcionadosNP p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #0FAFAB;
+}
+
+#DVDatosResultados
+{
+}
+
+#DVDatosResultados p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #0FAFAB;
+}
+
+
+#DVDatosTePareceSuficiente
+{
+	float: left;
+	vertical-align: text-bottom;
+}
+
+
+#DVDatosTePareceSuficienteNP
+{
+	float: left;
+    text-align: justify;
+}
+
+#DVDatosTePareceSuficiente p
+{
+	font-family: robotoregular;
+	font-size: 19px;
+	font-weight: bold;
+	color: #0FAFAB;
+}
+
+#DVDatosTePareceSuficiente_2 p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #0FAFAB;
+}
+
+#DVDatosTePareceSuficienteNP p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #0FAFAB;
+}
+
+#DVSalarioBaseCotizacionMensualR
+{
+	float: left;
+	width: 16%;
+	height: 80px;
+}
+
+
+.DVSalarioBaseCotizacionMensualRNP
+{
+	float: left;
+	width: 16%;
+	height: 80px;
+}
+
+#DVSaldoActualAforeR
+{
+	float: left;
+	width: 12.8%;
+	height: 80px;
+}
+
+#DVSaldoActualAforeRNP
+{
+	float: left;
+	width: 12.8%;
+	height: 80px;
+}
+
+#DVGeneroR
+{
+	float: left;
+	width: 8.8%;
+	height: 80px;
+}
+
+
+.DVGeneroRNP
+{
+	float: left;
+	width: 8.8%;
+	height: 80px;
+}
+#DVEdadR
+{
+	float: left;
+	width: 9.6%;
+	height: 80px;
+}
+
+.DVEdadRNP
+{
+	float: left;
+	width: 9.6%;
+	height: 80px;
+}
+
+#DVEdadRetiroR
+{
+	float: left;
+	width: 10.6%;
+	height: 80px;
+}
+
+
+.DVEdadRetiroRNP
+{
+	float: left;
+	width: 10.6%;
+	height: 80px;
+}
+
+#DVAniosCotizadosR
+{
+	float: left;
+	width: 11.6%;
+	height: 80px;
+}
+
+
+.DVAniosCotizadosRNP
+{
+	float: left;
+	width: 11.6%;
+	height: 80px;
+}
+
+#DVRendimientoRealAntesComisionesR
+{
+	float: left;
+	width: 17.3%;
+	height: 80px;
+}
+
+
+.DVRendimientoRealAntesComisionesRNP
+{
+	float: left;
+	width: 17.3%;
+	height: 80px;
+}
+
+
+#DVDensidadCotizacionR
+{
+	float: left;
+	width: 12%;
+	height: 80px;
+}
+
+#DVDensidadCotizacionRNP
+{
+	float: left;
+	width: 12%;
+	height: 80px;
+}
+
+
+.lblSalarioBaseCotizacionMensualR
+{
+	float: right;
+	margin-top: 45px;
+	margin-right: 30px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+.lblSaldoActualAforeR
+{
+	float: right;
+	margin-top: 45px;
+	margin-right: 5px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+.imgGeneroR
+{
+	float: right;
+	margin-top: 39px;
+	margin-right: 30px;
+	font-weight: normal;
+	width: 14px;
+}
+
+.lblEdadR
+{
+	float: right;
+	margin-top: 45px;
+	margin-right: 30px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+.lblEdadRetiroR
+{
+	float: right;
+	margin-top: 45px;
+	margin-right: 30px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+.lblAniosCotizadosR
+{
+	float: right;
+	margin-top: 45px;
+	margin-right: 35px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+.lblRendimientoRealAntesComisionesR
+{
+	float: right;
+	margin-top: 45px;
+	margin-right: 50px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+.lblDensidadCotizacionR
+{
+	float: right;
+	margin-top: 45px;
+	margin-right: 15px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+    margin-bottom: 60px;
+    padding-left: 30px;
+}
+
+
+.checkbox
+{
+	margin-left: 10px;
+	margin-top: 25px;
+}
+
+
+#DVCalculadora-Pie
+{
+	width: 100%;
+	float: left;
+	margin-top: 30px;
+}
+
+
+.lblSaldoAcumuladoR
+{
+	float: right;
+	margin-top: 20px;
+	font-family: robotoregular;
+	font-size: 18px;
+	font-weight: bold;
+	color: #00ACAA;
+}
+
+.lblPensionMensualEstimadaR
+{
+	float: right;
+	margin-top: 15px;
+	font-family: robotoregular;
+	font-size: 18px;
+	font-weight: bold;
+	color: #00ACAA;
+}
+
+.Salvaguardia 
+{
+    font-size: 12px;
+	height: 25px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	color: #5b5656;
+	text-align: justify;
+    margin:5px;
+}
+
+.EtiquetaTotal 
+{
+	font-family: robotoregular;
+	font-size: 18px;
+	font-weight: bold;
+	color: #00ACAA;
+}
+
+.EtiquetaTotalTick 
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: black;
+}
+
+.GHInvertir 
+{
+    border-radius:15px 15px 0px 0px;
+    border-color:#ff7366;
+    height:80px;
+    text-align:center;
+    color:black;
+    font-size: 16px;
+    margin-bottom:15px;
+    vertical-align:middle;
+}
+
+.EtiquetaTotalGH 
+{
+	font-family: robotoregular;
+	font-size: 18px;
+	font-weight: bold;
+	color: #ef3466;
+   margin-left:5px;
+   margin-right:5px;
+}
+
+.lblPorcentajePensionMensualR
+{
+	float: right;
+	margin-top: 2px;
+	font-family: robotoregular;
+	font-size: 18px;
+	font-weight: bold;
+	color: #00ACAA;
+}
+
+.lblPMG_Menor100
+{
+	text-align: justify;
+	font-family: robotoregular;
+	font-size: 10px;
+	font-weight: normal;
+	margin: 0px 10px 0px 25px;
+	color: #5b5656;
+	float: left;
+	position: relative;
+	top: 20px;
+	padding-left: 100px;
+}
+
+.lblPMG_Mayor100
+{
+	text-align: justify;
+	font-family: robotoregular;
+	font-size: 19px;
+	font-weight: normal;
+	margin: 0px 10px 0px 25px;
+	color: #5b5656;
+	float: left;
+	position: relative;
+	top: 20px;
+}
+
+.lblPMG
+{
+    font-size:12px;
+    font-weight:bold;
+}
+
+.lblPMG_100
+{
+	float: none;
+}
+
+.spanNotaPMG
+{
+    font-size:14px;
+    font-weight:bold;
+    font-family:robotoregular;
+    float:none;
+    width:100%;
+}
+
+.spanNotaPMG span
+{
+    width:100%;
+}
+
+.spanNotaPMG_100
+{
+	font-size: 20px;
+}
+
+.texto
+{
+	text-align: center;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+.textochico
+{
+	text-align: center;
+	font-family: robotoregular;
+	font-size: 12px;
+	font-weight: bold;
+	padding-top: 15px;
+	margin-right: 5px;
+	color: #5b5656;
+}
+
+.tblTablaResultadoImg {
+	float: left;
+	border: 1px solid #FFFFFF;
+	border-collapse: collapse;
+	background-color: #FAFAFA;
+   width:100%;
+   height:90px;
+}
+
+.tblTablaResultadoImg tr:first-child
+{
+    background-color:#f2f0f0;
+    color:white;
+    font-weight:bold;
+    text-align:center;
+    vertical-align:middle;
+    font-size:12px;
+    padding:15px;
+}
+
+.tblTablaResultadoImg tr:nth-child(1n+2) 
+{
+    background-color: #f2f0f0;
+}
+
+.tblTablaResultadoImg tr:nth-child(2n+2) 
+{
+    background-color: #CCC;
+}
+
+#tblTablaResultado
+{
+	float: left;
+	border: 1px solid #808080;
+	border-collapse: collapse;
+	background-color: #FAFAFA;
+}
+
+	#tblTablaResultado th
+	{
+		border: 1px solid #808080;
+		text-align: center;
+		color: #ffffff;
+		font-family: robotoregular;
+		font-size: 15px;
+		padding-top: 50px;
+		padding-bottom: 10px;
+        width: 120px;
+		border: 1px solid #ffffff;
+		border-collapse: collapse;
+	}
+
+	#tblTablaResultado td
+	{
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-family: robotoregular;
+		font-size: 15px;
+		font-weight: bold;
+		color: #5b5656;
+	}
+
+#tblTablaResultadoNP_ODT5
+{
+	float: left;
+	background-color: #FAFAFA;
+	width: 536px;
+}
+
+#tblTablaResultadoNP_ODT5 td
+{
+	border: 1px solid #808080;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+.RegistrostablaNP
+{
+	border: 1px solid #808080;
+	text-align: center;
+	color: #ffffff;
+	font-family: robotoregular;
+	font-size: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #0FAFAB;
+	border: 1px solid #ffffff;
+	border-collapse: collapse;
+}
+
+
+.muevePosicion {
+    padding-left: 60px !important;
+}
+
+/*Barra de porcentaje*/
+.indicadorBarra
+{
+	position: relative;
+	left: 83px;
+}
+
+.indicadorBarra10
+{
+	bottom: 125px;
+}
+
+.indicadorBarra20
+{
+	bottom: 152px;
+}
+
+.indicadorBarra30
+{
+	bottom: 180px;
+}
+
+.indicadorBarra40
+{
+	bottom: 205px;
+}
+
+.indicadorBarra50
+{
+	bottom: 231px;
+}
+
+.indicadorBarra60
+{
+	bottom: 259px;
+}
+
+.indicadorBarra70
+{
+	bottom: 285px;
+}
+
+.indicadorBarra80
+{
+	bottom: 311px;
+}
+
+.indicadorBarra90
+{
+	bottom: 337px;
+}
+
+.indicadorBarra100
+{
+	bottom: 364px;
+}
+
+
+/*Grafica*/
+
+.dvGrafica1
+{
+	width: 169px;
+	height: 365px;
+	
+	background-repeat: no-repeat;
+	margin: 0 auto;
+}
+
+.dvGrafica2
+{
+	width: 130px;
+	height: 315px;
+	
+	background-repeat: no-repeat;
+	margin: 0 auto;
+}
+
+.porcentaje1
+{
+	border: 0;
+	color: #5b5656;
+	font-weight: bold;
+	font-size: 16px;
+	margin-left: 15px;
+	text-align: center;
+	background-color: transparent;
+    margin-top:50px;
+}
+
+
+.porcentaje
+{
+	border: 0;
+	color: #5b5656;
+	font-weight: bold;
+	font-size: 16px;
+	margin-left: 15px;
+	text-align: center;
+	background-color: transparent;
+    margin-top:60px;
+}
+
+.pension
+{
+	border: 0;
+	color: #5b5656;
+	font-weight: bold;
+	font-size: 16px;
+	width: 70px;
+	margin-left: 15px;
+	text-align: center;
+	background-color: transparent;
+}
+
+.barraGrafica
+{
+	z-index: 1;
+	position: relative;
+	left: 100px;
+	height: 247px;
+	width: 150px;
+}
+
+.barraGrafica-Termometro1
+{
+	z-index: 1;
+	left: 100px;
+	top: 38px;
+	height: 247px;
+	width: 150px;
+    position: static !important;
+}
+
+.Titulo 
+{
+    font-size: 18px;
+	font-weight: bold;
+	color: #00a095;
+    background-color:#e2e3e3;
+    text-align:center;
+    border-radius:15px 15px 0px 0px;
+    height:50px;
+    vertical-align:middle;
+    width:100%;
+    height:100%;
+   border-left:1px solid rgb(226, 227, 227);
+   border-right:1px solid rgb(226, 227, 227);
+   border-top:1px solid rgb(226, 227, 227);
+
+}
+.Cuerpo {
+   border-left:1px solid rgb(226, 227, 227);
+   border-right:1px solid rgb(226, 227, 227);
+}
+.Pie {
+    border-radius:0px 0px 15px 15px;
+   border-left:1px solid rgb(226, 227, 227);
+   border-right:1px solid rgb(226, 227, 227);
+   border-bottom:1px solid rgb(226, 227, 227);
+}
+
+.TituloEti 
+{
+    font-family: robotoregular;
+    font-size: 14px;
+	font-weight: bold;
+	color: black;
+    text-align:center;
+    padding-top:30px;
+}
+
+.Nube, .Nube2 
+{
+    border-radius: 5px 5px 5px 5px;
+    background-color:red;
+    color:white;
+    font-size:13px;
+    font-weight:bold;
+    padding-left:10px;
+    padding-right:10px;
+    text-align:center;
+    float:right;
+    font-family:sans-serif;
+    margin-right:15px;
+}
+
+.Nube2 
+{
+    border-radius: 5px 5px 5px 5px;
+    width: 80%;
+    font-size: 16px;
+    font-weight: bold;
+    float: none;
+    margin-bottom: 10px;
+    margin-left: 40px;
+
+}
+
+.Nube span, .Nube2 span
+{
+    font-size:14px;
+    font-weight:bold;
+    font-family: robotoregular;
+    float:none;
+}
+
+#divGHAhorro 
+{
+    border-radius:0px 0px 15px 15px;
+    background-color:#ff7366;
+    height:50px;
+    font-size:18px;
+    font-weight:bold;
+    vertical-align:middle;
+    color:white;
+    width: 520px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-top: 20px; 
+}
+
+
+#barraGraficaProgreso
+{
+    background-repeat: no-repeat;
+	z-index: 2;
+	position: relative;
+}
+
+
+#barraGraficaProgreso1
+{
+    background-repeat: no-repeat;
+	z-index: 2;
+	position: relative;
+}
+
+
+#barraGraficaProgreso {
+    margin-left: -55px;
+    width: 64px;
+    top: 100px;
+}
+
+#barraGraficaProgreso1
+{
+    background-repeat: no-repeat;
+}
+
+.barraGraficaProgreso10
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-10.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.barraGraficaProgreso15
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-15.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.barraGraficaProgreso20
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-20.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.barraGraficaProgreso25
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-25.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+
+.barraGraficaProgreso30
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-30.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.barraGraficaProgreso35
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-35.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+
+.barraGraficaProgreso40
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-40.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.barraGraficaProgreso45
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-45.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+
+.barraGraficaProgreso50
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-50.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.barraGraficaProgreso55
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-55.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+
+.barraGraficaProgreso60
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-60.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.barraGraficaProgreso65
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-65.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+
+.barraGraficaProgreso70
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-70.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.barraGraficaProgreso75
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-75.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+
+.barraGraficaProgreso80
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-80.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.barraGraficaProgreso85
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-85.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.barraGraficaProgreso90
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-90.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.barraGraficaProgreso95
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-95.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.barraGraficaProgreso100
+{
+    width: 169px;
+    height: 365px;
+    background-image: url("../imagenes/tabla_grafica-cilindro1-100.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+
+
+.barraGraficaProgreso20-Termometro
+{
+	height: 49px;
+	top: 185px !important;
+
+    background-image: url("../imagenes/tabla_grafica-20.png");
+    margin-left: -100px !important;
+    width: 120px !important;
+    height: 310px !important;
+    position: static !important;
+    margin-left: -94px !important;
+}
+
+
+.barraGraficaProgreso30-Termometro
+{
+    height: 49px;
+    top: 185px !important;
+    background-image: url(../imagenes/tabla_grafica-30.png);
+    width: 120px !important;
+    height: 310px !important;
+    position: static !important;
+    margin-left: -94px !important;
+}
+
+
+.barraGraficaProgreso40-Termometro
+{
+	height: 49px;
+    top: 185px !important;
+    background-image: url(../imagenes/tabla_grafica-40.png);
+    width: 120px !important;
+    height: 310px !important;
+    position: static !important;
+    margin-left: -94px !important;
+}
+
+
+.barraGraficaProgreso50-Termometro
+{
+	height: 49px;
+    top: 185px !important;
+    background-image: url(../imagenes/tabla_grafica-50.png);
+    width: 120px !important;
+    height: 310px !important;
+    position: static !important;
+    margin-left: -94px !important;
+}
+
+
+.barraGraficaProgreso60-Termometro
+{
+	height: 49px;
+    top: 185px !important;
+    background-image: url(../imagenes/tabla_grafica-60.png);
+    width: 120px !important;
+    height: 310px !important;
+    position: static !important;
+    margin-left: -94px !important;
+}
+
+
+.barraGraficaProgreso70-Termometro
+{
+	height: 49px;
+    top: 185px !important;
+    background-image: url(../imagenes/tabla_grafica-70.png);
+    width: 120px !important;
+    height: 310px !important;
+    position: static !important;
+    margin-left: -94px !important;
+}
+
+
+.barraGraficaProgreso80-Termometro
+{
+	height: 49px;
+    top: 185px !important;
+    background-image: url(../imagenes/tabla_grafica-80.png);
+    width: 120px !important;
+    height: 310px !important;
+    position: static !important;
+    margin-left: -94px !important;
+}
+
+.barraGraficaProgreso90-Termometro
+{
+	height: 49px;
+    top: 185px !important;
+    background-image: url(../imagenes/tabla_grafica-90.png);
+    width: 120px !important;
+    height: 310px !important;
+    position: static !important;
+    margin-left: -94px !important;
+}
+
+.barraGraficaProgreso100-Termometro
+{
+	height: 49px;
+    top: 185px !important;
+    background-image: url(../imagenes/tabla_grafica-100.png);
+    width: 120px !important;
+    height: 310px !important;
+    position: static !important;
+    margin-left: -94px !important;
+}
+
+.imgProgresoBarra
+{
+	position: relative;
+	right: -12px;
+	bottom: 25px;
+}
+
+.porcentajeFlotante
+{
+	position: relative;
+	right: -22px;
+	bottom: 100px;
+}
+
+.pensionFlotante
+{
+	position: relative;
+	bottom: 72px;
+	right: -22px;
+}
+
+#DVResultado-Pie
+{
+	width: 100%;
+	height: 160px;
+	float: left;
+	margin-top: 50px;
+}
+
+#DVResultado-PieNP
+{
+	width: 100%;
+	height: 260px;
+	float: left;
+	margin-top: 30px;
+}
+
+
+#DVCalcular-Resultado
+{
+	float: left;
+	width: 30%;
+	height: 50px;
+}
+
+#DVCalcular-ResultadoNP
+{
+	float: left;
+	width: 30%;
+	height: 50px;
+}
+
+#DVMensajesFinales
+{
+	float: left;
+	width: 70%;
+	height: 50px;
+}
+
+#DVMensajesFinalesNP
+{
+	float: left;
+	width: 70%;
+	height: 50px;
+}
+
+#DVMensajesFinales p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	color: #5b5656;
+	text-align: justify;
+}
+
+.NotasNP
+{
+	float: left;
+	width: 90%;
+	height: 50px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	color: #5b5656;
+	text-align: justify;
+	margin-top: 20px;
+	margin-left: 30px;
+	height: 100px;
+}
+
+#DVMensajesFinalesNP p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	color: #5b5656;
+	text-align: justify;
+}
+
+#DVAhorroAdicional
+{
+    width: 100%;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px;
+    padding-left: 30px
+}
+
+#DVAhorroAdicional p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	color: #5b5656;
+}
+
+
+.rightCal
+{
+	float: right;
+}
+
+.leftCal
+{
+	float: left;
+}
+
+.cursorHand
+{
+	cursor: pointer;
+}
+
+
+/*Visibilidad Paneles*/
+
+.panelVisible
+{
+	display: block;
+}
+
+.panelOculto
+{
+	display: none;
+}
+
+.botonVisible
+{
+	display: block;
+}
+
+.botonOculto
+{
+	display: none;
+}
+
+#spanTipoCaso {
+}
+
+
+
+#cargando
+{
+	width: 150px;
+	height: 150px;
+	clear: both;
+	background-image: url(../imagenes/cargandoPaginaWeb.gif);
+	margin: 200px auto;
+}
+
+.CentradoCalc
+{
+	width: 988px;
+	margin-left: 0;
+	margin-right: auto;
+}
+
+.TextoDescripcion
+{
+	text-align: justify;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	margin: 20px 20px 10px 20px;
+	color: #5b5656;
+}
+
+.TrabajadorIMSS
+{
+	background-image: url(../imagenes/btn_imss_1-01.png);
+	width: 200px;
+	height: 84px;
+	float: left;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+
+	.TrabajadorIMSS:hover
+	{
+		background-image: url(../imagenes/btn_imss_2.png);
+	}
+
+.TrabajadorIndependiente
+{
+	background-image: url(../imagenes/btn_indepen_1-01.png);
+	width: 200px;
+	height: 84px;
+	margin-left: 30px;
+	float: left;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+
+	.TrabajadorIndependiente:hover
+	{
+		background-image: url(../imagenes/btn_indepen_2-01.png);
+		width: 200px;
+		height: 84px;
+		margin-left: 30px;
+	}
+
+.SeleccionCalculadora
+{
+	width: 600px;
+	padding-top: 50px;
+	padding-bottom: 200px;
+	clear: both;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.EtiquetaAhorroNP
+{
+	border: 0px;
+	text-align: center;
+	color: #808080;
+	font-family: robotoregular;
+	font-size: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #ececec;
+}
+
+.EtiquetaSaldoNP
+{
+	border: 0px;
+	text-align: center;
+	color: #808080;
+	font-family: robotoregular;
+	font-size: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #ececec;
+}
+
+.InformacionTabla
+{
+	border: 0px;
+	text-align: center;
+	color: #808080;
+	font-family: robotoregular;
+	font-size: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #ececec;
+}
+
+.GeneracionTransicionImage
+{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(../imagenes/generacion_transicion.png);
+	width: 465px;
+	height: 215px;
+}
+
+
+
+/*Estilos para calculadora de trabajaores independientes*/
+
+#CapturaIndependientes
+{
+	width: 900px;
+	height: 168px;
+	background-image: url(../imagenes/datos_indepen.png);
+	float: left;
+}
+
+.SeleccionEdad
+{
+	height: 20px;
+	width: 20px;
+	position: relative;
+	top: 4px;
+}
+
+
+.textoDescripcionFormulario
+{
+	text-align: justify;
+	font-family: robotoregular;
+	color: #3A475A;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.textoSaldoFormulario
+{
+	text-align: justify;
+	font-family: robotoregular;
+	color: #3A475A;
+	font-size: 16px;
+	font-weight: 900;
+}
+
+.txtFormulario
+{
+	height: 25px;
+	text-align: center;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: black;
+	border: none;
+	background-color: transparent;
+}
+
+
+#dvAhorroEstimado
+{
+	background-image: url(../imagenes/flecha_resultado.png);
+	width: 900px;
+	height: 62px;
+	float: left;
+}
+
+#dvAportacionVoluntaria
+{
+	background-image: url(../imagenes/av_independientes.png);
+	width: 900px;
+	height: 310px;
+	float: left;
+}
+
+.MarcaListaAR
+{
+	color: #1F497D;
+}
+
+.TextoMorado
+{
+	text-align: justify;
+	font-family: robotoregular;
+	margin: 20px 20px 10px 20px;
+	font-size: 20px;
+	color: #583682;
+	font-weight: 700;
+}
+
+.text_Modales_Indi
+{
+	font-size: 1em;
+	color: #414040;
+	text-align: justify;
+}
+
+	.text_Modales_Indi a:link
+	{
+		color: blue;
+	}
+
+	.text_Modales_Indi a:visited
+	{
+		color: blue;
+	}
+
+	.text_Modales_Indi a:hover
+	{
+		color: purple;
+	}
+
+.ligaMetodologia
+{
+	position: relative;
+	top: 30px;
+}
+
+.RegresaInicio
+{
+	background-image: url(../imagenes/inicio.gif);
+	width: 99px;
+	height: 32px;
+	float: left;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+
+.RealizarOtroEjercicio
+{
+	background-image: url(../imagenes/otro_ejerc2.png);
+	height: 32px;
+	float:right;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+
+.TextoDescripcion a:link
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	text-align: justify;
+	color: #5b5656;
+}
+
+.TextoDescripcion a:hover
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	text-align: justify;
+	color: #5b5656;
+}
+
+.TextoDescripcion a:visited
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	text-align: justify;
+	color: #5b5656;
+}
+
+
+#loadingDiv
+{
+	position: fixed;
+	top: 0px;
+	left: 150px;/*antes 0*/
+	width: 900px;
+	height: 100%;
+	background-color: transparent;
+	background-image: url(../imagenes/cargandopaginaweb_57331.gif);
+	background-repeat: no-repeat;
+	background-position: right; /*antes center*/
+	z-index: 10000000;
+	opacity: 1.0;
+	filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+/*Estilos para centrar DVs de */
+.DVSalarioBaseCotizacionMensualRNP_sd{
+	Width:19.2%;
+	float: left;
+	height: 80px;
+	}
+.DVGeneroRNP_sd{
+	Width:10.7%;
+	float: left;
+	height: 80px;
+	}
+.DVEdadRNP_sd{
+	Width:11.6%;
+	float: left;	
+	height: 80px;
+	}
+.DVEdadRetiroRNP_sd{
+	Width:12.5%;
+	float: left;	
+	height: 80px;
+	}
+
+.DVAniosCotizadosRNP_sd{
+	Width:14%;
+	float: left;	
+	height: 80px;
+	}
+.DVRendimientoRealAntesComisionesRNP_sd{
+	Width:20%;
+	float: left;	
+	height: 80px;
+	}
+
+.DVCentraResultadosPT_sd{
+	margin: 0px auto; 
+	width: 750px; 
+}
+#TextoIMSS73
+{
+	float: left;
+	width: 30%;
+	border: none;
+	background-color:#10A08F;
+	height:214px;
+}
+
+#ImgFlecha
+{
+	float: left;
+	width: 10%;
+	border: none;
+	vertical-align:middle;
+	display:block;
+    margin:auto;	    
+}
+
+#DVImgEdoCuenta
+{
+	float: left;
+	width: 60%;
+	border: none;
+}
+
+.PiePagIP
+{
+	float: right;
+    text-align:right;
+}
+
+.numVisitas {
+    background-color:gray;
+    color:white;
+    font-size:15px;
+    font-family:robotoregular;
+}
+
+.numVisitaslB {
+    font-size:15px;
+    font-family:robotoregular;
+    color:GrayText;
+}
+
+
+.GastoHTitulo, .GastoHTexto
+{
+    width:100%;
+    display:block;
+    color: #ef3466;
+    font-size:16px;
+    text-align:center;
+    margin-top:10px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.GastoHTexto {
+    color:black;
+    font-size:15px;
+    margin-top:0px;
+    margin-bottom:10px;
+}
+
+.GastoH {
+    text-align:center;
+
+}
+
+.GastoH label, .GastoH span {
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: robotoregular;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ef3466;
+}
+
+.PiezasH {
+    border: 1px solid black;
+    width: 54px;
+    height:20px;
+    margin:auto;
+    background-color:black;
+}
+.CIzq, .CDer {
+    font-size:8px;
+    color:white;
+    width:13px;
+    height:100%;
+    float:left;
+    text-align:center;
+    vertical-align:middle;
+    font-weight:bold;
+    background-image:url(../imagenes/FlechaGHIzq.png);
+    cursor: pointer;
+    background-position:center center;
+    background-repeat:no-repeat; 
+}
+.CDer {
+    background-image:url(../imagenes/FlechaGHDer.png);
+    cursor: pointer;
+}
+.CCen {
+    background-color:green;
+    width:25px;
+    height:100%;
+    float:left;
+    font-size:12px;
+    text-align:center;
+    vertical-align:central;
+    color:white;
+    font-weight:bold;
+    color:white;   font-size:12px;
+    text-align:center;
+    vertical-align:central;
+    color:white;
+    font-weight:bold;
+}
+
+.CCen span 
+{
+    color: white;
+}
+
+#lblSaldoActual, #lblSaldoActualNP
+{
+    font-weight:bold;
+    color:#92D050;
+    padding-left: 90px;
+    position:relative;
+    top:-25px;
+}
+
+#lblRendimientosFuturos, #lblRendimientoFuturoNP
+{
+    font-weight:bold;
+    color:#F5750B;
+    padding-left: 80px;
+    position:relative;
+    top:-25px;
+}
+
+.NotasAlPie 
+{
+    font-size:10px;
+    color:black;
+    text-align:center;
+}
+
+.tblTablaResultadoNP {
+    border-spacing:2px;
+    border-collapse:separate;
+    color:black;
+}
+
+.tblTablaResultadoNP td
+{
+    font-size:12px;
+    color:black;
+}
+.tblTablaResultadoNP tr
+{
+    height:50px;
+}
+.tblTablaResultadoNP tr:first-child
+{
+    color:white;
+    font-weight:bold;
+    text-align:center;
+    vertical-align:middle;
+    font-size:12px;
+    padding:15px;
+}
+.tblTablaResultadoNP tr:nth-child(1n+2) 
+{
+    background-color: #CCC;
+}
+
+.fdotr {
+    background-color:#009999;
+    background-repeat:no-repeat;
+}
+
+.fdotrIzq {
+    background-color:#009999;
+    background-repeat:no-repeat;
+}
+
+
+.tblTablaResultadoNP tr:nth-child(2n+2) 
+{
+    background-color: #F2F2F2;
+}
+
+#NPParteFormula 
+{
+    height: 50px;
+    text-align:center;
+    width:100%;
+    background-image:url("../imagenes/encabezado_mejora_NP.png");
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+
+
+#divP2PME {
+    background-image:url("../imagenes/PensionMensualEstimada.png");
+    width:557px;
+    height:60px;
+    margin-top:15px;
+}
+
+.divPME {
+    background-image:url("../imagenes/PensionMensualEstimadaChico2.png");
+    height:60px;
+    background-repeat: no-repeat;
+}
+
+.divSAAR {
+    background-image:url("../imagenes/SaldoAcumuladoAlRetiro2.png");
+    width:447px;
+    height: 60px;
+    background-repeat: no-repeat;
+}
+#divP2PD {
+    margin-top:15px;
+    height: 60px;
+}
+
+
+.G2Leyenda {
+   z-index:1000;
+   margin-top:40px;
+}
+
+.Sombra {
+   background-image:url("../imagenes/Sombra.png");
+}
+
+.Dinero {
+   background-image:url("../imagenes/Dinero.png");
+   background-position:center bottom;
+   background-repeat:no-repeat;
+   width:120px;
+   background-color:white;
+}
+
+.Cerdo {
+   background-image:url("../imagenes/Cerdo.png");
+   background-position:center bottom;
+   background-repeat:no-repeat;
+   background-color:white;
+}

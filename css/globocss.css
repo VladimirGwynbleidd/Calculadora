@@ -1,0 +1,46 @@
+﻿body
+{
+	margin-top: 100px;
+}
+
+.ui-widget-content
+{
+	background-image: url(../imagenes/globo-chico.png);
+	width: 287px;
+	height: 132px;
+}
+
+.ui-tooltip-content::after, .ui-tooltip-content::before
+{
+	content: "";
+	position: absolute;
+	border-style: solid;
+	display: block;
+	left: 90px;
+	background-color: none;
+}
+
+.ui-tooltip-content::before
+{
+	bottom: -10px;
+	border-color: transparent;
+	border-width: 10px 10px 0;
+}
+
+.ui-tooltip-content::after
+{
+	bottom: -7px;
+	border-color: transparent;
+	border-width: 10px 10px 0;
+}
+
+#divglobo
+{
+	background-image: url(../imagenes/globo-chico-2.png);
+	width: 287px;
+	height: 132px;
+}
+
+img.big {
+    height: 10%;
+}

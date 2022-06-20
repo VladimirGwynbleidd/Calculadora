@@ -1,0 +1,327 @@
+﻿
+.CajaDialogo {
+    background-color:#FFFFFF;
+    border-width: 4px;
+    border-style: outset;
+    border-color: Yellow;
+    padding: 0px;
+    width: 375px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+.CajaDialogo div {
+    margin: 7px;
+    text-align: center;
+}
+
+.FondoAplicacion {
+    background-color: Gray;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+
+
+#mensaje1 {
+    background-image: url(../imagenes/globo.png);
+    width:287px;
+    height:208px;
+	
+    display:none;
+	
+	margin-left:67%;
+	margin-top:-100px;
+	left: 0px !important;
+}
+
+#reference1 {
+    float:right;
+}
+
+#mensaje2 {
+    background-image: url(../imagenes/globo-chico.png);
+    width:287px;
+    height:130px;
+	
+    display:none;
+	
+	margin-left:66%;
+	margin-top:-100px;
+	left: 0px !important;
+}
+
+#reference2 {
+    float:right;
+    margin-right:8px;
+
+}
+
+#mensaje3 {
+    background-image: url(../imagenes/globo-chico.png);
+    width:287px;
+    height:132px;
+	
+    display:none;
+	
+	margin-left:28%;
+	margin-top:-100px;
+	left: 0px !important;
+}
+
+#reference3 {
+    float:right;
+    margin-right:8px;
+}
+
+#mensaje4 {
+    background-image: url(../imagenes/globo-chico.png);
+    width:287px;
+    height:130px;
+	
+    display:none;
+	
+	margin-left:28%;
+	margin-top:-107px;
+	left: 0px !important;
+}
+
+#reference4 {
+    float:right;
+    margin-right:8px;
+}
+
+#mensaje5 {
+    background-image: url(../imagenes/globo-chico.png);
+    width:287px;
+    height:130px;
+	
+    display:none;
+	margin-left:28%;
+	margin-top:-105px;
+	left: 0px !important;
+}
+
+#reference5 {
+    float:right;
+    margin-right:8px;
+}
+
+#mensaje6 {
+    background-image: url(../imagenes/globo.png);
+    background-repeat: no-repeat;
+    width:287px;
+    height:210px;
+	
+    display:none;
+	background-repeat: no-repeat;
+	margin-left:28%;
+	margin-top:-100px;
+	left: 0px !important;
+}
+
+#reference6 {
+    float:right;
+    margin-right:8px;
+}
+
+#mensaje7 {
+    background-image: url(../imagenes/globo.png);
+    width:287px;
+    height:200px;
+	
+    display:none;
+	
+	margin-left:66%;
+	margin-top:-105px;
+	left: 0px !important;
+}
+
+#reference7 {
+    float:right;
+    margin-right:8px;
+}
+
+#mensaje8 {
+    background-image: url(../imagenes/globo-grande.png);
+    width:287px;
+    height:280px;
+	
+    display:none;
+	
+	display:none;
+	margin-left:66%;
+	margin-top:-105px;
+	left: 0px !important;
+}
+
+#reference8 {
+    float:right;
+    margin-right:8px;
+}
+
+#mensaje9 {
+    background-image: url(../imagenes/globo.png);
+    width:287px;
+    height:208px;
+	
+    display:none;
+	margin-left:67%;
+	margin-top:-100px;
+	left: 0px !important;
+	
+}
+
+#reference9 {
+    float:right;
+    margin-right:8px;
+}
+
+#mensaje10 {
+    background-image: url(../imagenes/globo-chico.png);
+    width:287px;
+    height:132px;
+	
+    display:none;
+	
+	left: 0px!important;
+    margin-left: 61%;
+    margin-top: -105px;
+	
+	
+}
+
+#mensaje10-1 {
+    background-image: url(../imagenes/globo-chico.png);
+    width:287px;
+    height:132px;
+	
+    display:none;
+	
+	left: 0px!important;
+    margin-left: 61%;
+    margin-top: -105px;
+	
+	
+}
+
+#reference10, #reference10-1 {
+    float:right;
+    margin-right:10px;
+}
+
+#mensaje11 {
+    background-image: url(../imagenes/globo.png);
+    width:287px;
+    height:210px;
+	
+    display:none;
+	background-repeat: no-repeat;	
+	left: 0px!important;
+    margin-left: 334px;
+    margin-top: -80px;
+}
+
+#reference11 {
+    float:right;
+    margin-right:10px;
+    margin-top:-10px;
+}
+
+#mensaje12 {
+    background-image: url(../imagenes/globo-chico.png);
+    width:287px;
+    height:130px;
+	
+	display:none;
+	margin-left:28%;
+	margin-top:-105px;
+	left: 0px !important;
+}
+
+#reference12 {
+    float:right;
+    margin-right:8px;
+    margin-top: -4px;
+}
+
+#mensaje13 {
+    background-image: url(../imagenes/globo.png);
+    width:287px;
+    height:208px;
+	
+    display:none;
+	
+	display:none;
+	margin-left:46%;
+	margin-top:-100px;
+	left: 0px !important;
+}
+
+#reference13 {
+    float:right;
+    /*margin-right:8px;*/
+    margin-top: -18px;
+}
+
+
+#mensaje14 {
+    background-image: url(../imagenes/globo.png);
+    width: 287px;
+    height: 208px;
+    display: none;
+    display: none;
+    margin-top: -70px;
+    left: 67.6% !important;
+}
+
+#reference14 {
+    float:right;
+    /*margin-right:8px;*/
+    /*margin-top: -18px;*/
+}
+
+
+#mensaje15 {
+    background-image: url(../imagenes/globo.png);
+    width:287px;
+    height:208px;
+    display:none;
+	display:none;
+	left: 66% !important;
+}
+
+#reference15 {
+    float:right;
+    /*margin-right:8px;*/
+    /*margin-top: -18px;*/
+}
+
+
+.text_gral_popup {
+    margin: 20px 25px 10px 25px;
+    text-align:justify;
+    font-family:Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size:13px;
+    color:#ffffff;
+	font-size:12px !important;
+}
+
+.text_gral_popup a:link {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.text_gral_popup a:visited {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.text_gral_popup a:hover {
+    color: #ffffff;
+}
+
+.text_gral_popup a:active {
+    color: #ffffff;
+}

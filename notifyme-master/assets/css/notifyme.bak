@@ -1,0 +1,114 @@
+.notify
+{
+	position: fixed;
+	padding: 20px;
+	color: #fff;
+	z-index: 1001;
+	font-family: "Open Sans",helvetica,arial,tahoma;
+	width:1000px;
+	font-size:12px;
+}
+
+	.notify[data-position="bottom"]
+	{
+		right: 0;
+		left: 0;
+		bottom: 0;
+	}
+
+	.notify[data-position="top"]
+	{
+		right: 0;
+		left: 0;
+		top: 0;
+	}
+
+	.notify[data-position="right"]
+	{
+		right: 0;
+		bottom: 0;
+		top: 0;
+		max-width: 300px;
+	}
+
+	.notify[data-position="left"]
+	{
+		left: 0;
+		top: 0;
+		bottom: 0;
+		max-width: 300px;
+	}
+
+	.notify[data-notify='success']
+	{
+		background: #15cc1f;
+	}
+
+	.notify[data-notify='info']
+	{
+		background: #2d9cee;
+	}
+
+	.notify[data-notify='error']
+	{
+		background: #0FAFAB;
+	}
+
+	.notify[data-notify='default']
+	{
+		background: #cf80ad;
+	}
+
+	.notify .notify-close
+	{
+		cursor: pointer;
+		position: absolute;
+		right: 0;
+		bottom: 15px;
+		/*color: #39393A;*/
+		padding: 10px 15px;
+		font-size: 15px;
+		font-family: "Open Sans",helvetica,arial,tahoma;
+		text-decoration: none;
+	}
+
+	.notify h1
+	{
+		margin: 5px 0 10px 0;
+		/*text-transform:uppercase;*/
+		font-weight: 300;
+		color: #fff;
+		font-family: "Open Sans",helvetica,arial,tahoma;
+	}
+
+.overlay
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 300%;
+	z-index: 1000;
+	background-color: white;
+	-moz-opacity:0.00;
+	opacity: 0.00;
+	filter: alpha(opacity=0);
+}
+
+.notify-content
+{
+	font-family: "Open Sans",helvetica,arial,tahoma;
+}
+
+.container-notify
+{
+	padding: 10px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.topbar > .container-notify
+{
+	padding: 0;
+	margin: 0 auto;
+}

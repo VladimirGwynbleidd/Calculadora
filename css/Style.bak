@@ -1,0 +1,1780 @@
+﻿
+@font-face
+{
+	font-family: 'robotoregular';
+	src: url('../webfontkit/roboto-regular-webfont.eot');
+	src: url('../webfontkit/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../webfontkit/roboto-regular-webfont.woff2') format('woff2'), url('../webfontkit/roboto-regular-webfont.woff') format('woff'), url('../webfontkit/roboto-regular-webfont.ttf') format('truetype'), url('../webfontkit/roboto-regular-webfont.svg#robotoregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+a:link
+{
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+a:visited
+{
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+a:hover
+{
+	color: #ffffff;
+}
+
+a:active
+{
+	color: #ffffff;
+}
+
+
+
+#DVContenedorCalculadora
+{
+	width: 900px;
+	overflow: hidden;
+	/*border: 1px solid red;*/
+	background-color: transparent;
+	float: left;
+	margin-left: 40px;
+}
+
+#DVTextoTitulo
+{
+	width: 900px;
+	height: 100px;
+	text-align: center;
+	float: left;
+}
+
+.DVTextoTitulo
+{
+	width: 900px;
+	height: 220px;
+	text-align: center;
+	float: left;
+}
+
+#DVTextoTitulo p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	margin: 20px 20px 10px 20px;
+	text-align: justify;
+	color: #5b5656;
+}
+
+.DVTextoTitulo p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	margin: 20px 20px 10px 20px;
+	text-align: justify;
+	color: #5b5656;
+}
+
+#DVIngresaDatos
+{
+	width: 900px;
+	height: 40px;
+	float: left;
+}
+
+	#DVIngresaDatos #imgIngresatusdatos
+	{
+		float: left;
+	}
+
+	#DVIngresaDatos #imgInstituto
+	{
+		float: right;
+		margin-right: 0px;
+	}
+
+	#DVIngresaDatos #cboTipoTrabajador
+	{
+		float: right;
+		height: 29px;
+		width: 200px;
+		font-family: robotoregular;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+#DVAfore
+{
+	width: 900px;
+	height: 80px;
+	float: left;
+	background-color: transparent;
+}
+
+	#DVAfore #imgAfore
+	{
+		float: left;
+		margin-top: 15px;
+	}
+
+	#DVAfore #cboAfore
+	{
+		float: left;
+		height: 29px;
+		width: 200px;
+		font-family: robotoregular;
+		font-size: 20px;
+		font-weight: bold;
+		margin-top: 15px;
+	}
+
+	#DVAfore #cobracomision
+	{
+		float: left;
+		margin-left: 200px;
+		font-family: robotoregular;
+		font-size: 15px;
+		font-weight: normal;
+		margin-top: 5px;
+		margin-top: 25px;
+		color: #5b5656;
+	}
+
+	#DVAfore #txtComisionAfore
+	{
+		float: left;
+		width: 120px;
+		height: 40px;
+		font-size: 30px;
+		font-weight: bold;
+		font-family: robotoregular;
+		border: none;
+		background-color: transparent;
+		text-align: right;
+		color: #0FAFAB;
+		margin-top: 16px;
+	}
+
+	#DVAfore #imgInformacion
+	{
+		float: right;
+		border: none;
+	}
+
+
+#DVTemasImportancia
+{
+	/*float: right;
+    margin-top: 34px;
+    margin-right: 78px;*/
+	position: absolute;
+	top: 34px;
+	left: 668px;
+	width: 242px;
+	height: 31px;
+	background-image: url(../imagenes/desplegable_1.png);
+}
+
+	#DVTemasImportancia:hover
+	{
+		cursor: pointer;
+	}
+
+#DVTemasImportanciaDesplegable
+{
+	width: 242px;
+	height: 122px;
+	position: relative;
+	top: 34px;
+	left: 580px;
+	background-image: url(../imagenes/desplegable_2.png);
+	display: none;
+}
+
+#DVTemasImportanciaDesplegableIMSS
+{
+	width: 241px;
+	height: 93px;
+	position: absolute;
+	top: 34px;
+	left: 668px;
+	background-image: url(../imagenes/desplegable_2.png);
+	/*display: none;*/
+	cursor: pointer;
+}
+
+
+#imgDesplegableTemasImportancia
+{
+	width: 242px;
+	height: 122px;
+	position: absolute;
+	top: 34px;
+	left: 668px;
+	/*background-image: url(../imagenes/desplegable_2.png);*/
+}
+
+#DVTemasImportanciaDesplegableINDI
+{
+	width: 242px;
+	height: 122px;
+	position: relative;
+	top: 34px;
+	left: 668px;
+	background-image: url(../imagenes/desplegable_2.png);
+	display: none;
+}
+
+#DVTemasImportanciaDesplegable a#link1
+{
+	width: 200px;
+	height: 25px;
+}
+
+
+
+
+#DVFondoDatos
+{
+	background-image: url(../imagenes/datos.png);
+	width: 900px;
+	height: 322px;
+	float: left;
+}
+
+	#DVFondoDatos img
+	{
+		border: none;
+	}
+
+	#DVFondoDatos input[type="text"]
+	{
+		width: 130px;
+		height: 25px;
+		text-align: center;
+		font-family: robotoregular;
+		font-size: 15px;
+		font-weight: bold;
+		/*margin:0px 20px 0px 25px;*/
+		margin-left: 18px;
+		margin-top: 21px;
+		color: #5b5656;
+	}
+
+	#DVFondoDatos label
+	{
+		width: 170px;
+		text-align: right;
+		font-family: robotoregular;
+		font-size: 15px;
+		font-weight: normal;
+		margin-right: 15px;
+		color: #5b5656;
+	}
+
+.DensidadCotizacionIMSS
+{
+	margin-left: 100px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	margin-right: 15px;
+	color: #5b5656;
+}
+
+.DVFondoDatos-100
+{
+	width: 100%;
+	float: left;
+	height: 65px;
+}
+
+.DVFondoDatos-96
+{
+	width: 96%;
+	float: left;
+	height: 65px;
+}
+
+.DVFondoDatos-93
+{
+	width: 93%;
+	float: left;
+}
+
+.DVFondoDatos-50
+{
+	width: 50%;
+	float: left;
+	height: 65px;
+}
+
+.CTRLGeneral
+{
+	float: left;
+	margin-top: 10px;
+}
+
+/*#DVFondoEncabezado {
+    background-image: url(../imagenes/encabezado.png);
+    width:988px;
+    height:94px;
+    float:left;
+}*/
+
+.DVFondoEncabezadoIMSS
+{
+	/*background-image: url(../imagenes/encabezado_imss.png);*/
+	width: 988px;
+	height: 96px;
+	float: left;
+	position: relative;
+}
+
+.DVFondoEncabezadoInicio
+{
+	background-image: url(../imagenes/encabezado_entrada.png);
+	width: 988px;
+	height: 84px;
+	float: left;
+}
+
+.DVFondoEncabezadoIndi
+{
+	/*background-image: url(../imagenes/encabezado_independientes.png);*/
+	width: 988px;
+	height: 100px;
+	float: left;
+}
+
+#DVPieTexto
+{
+	width: 60%;
+	height: 100px;
+	float: left;
+}
+
+	#DVPieTexto p
+	{
+		text-align: justify;
+		font-family: robotoregular;
+		font-size: 15px;
+		font-weight: normal;
+		margin: 0px 10px 0px 25px;
+		color: #5b5656;
+	}
+
+.PieTexto
+{
+	float: left;
+	text-align: justify;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	margin: 0px 10px 0px 25px;
+	color: #5b5656;
+}
+
+#DVCalcular
+{
+	width: 30%;
+	height: 50px;
+	float: right;
+}
+
+.btnCalcular
+{
+	float: right;
+	margin-bottom: 20px;
+}
+
+.slidergral
+{
+	margin-top: 23px;
+}
+
+
+
+
+/*ESTILO RESULTADO*/
+
+#DVContenedorResultado
+{
+	width: 900px;
+	overflow: hidden;
+	/*border: 1px solid red;*/
+	float: left;
+	margin-left: 40px;
+}
+
+#DVResultadoAV_ODT100
+{
+	width: 650px;
+	overflow: hidden;
+	/*border: 1px solid red;*/
+	float: none;
+	margin-left: 182px;
+}
+
+#DVContenedorResultadoNP
+{
+	width: 900px;
+	overflow: hidden;
+	/*border: 1px solid red;*/
+	float: left;
+	margin-left: 40px;
+}
+
+#DVResultadoAVNP_ODT5
+{
+	width: 650px;
+	overflow: hidden;
+	/*border: 1px solid red;*/
+	float: none;
+	margin-left: 182px;
+}
+
+#DVDatosFormulario
+{
+	float: left;
+	background-image: url(../imagenes/menu_datos.png);
+	width: 100%;
+	border: none;
+	height: 80px;
+	background-repeat: no-repeat;
+}
+
+#DVDatosFormularioNP
+{
+	float: left;
+	/*background-image: url(../imagenes/menu_datos.png);*/
+	width: 100%;
+	border: none;
+	height: 80px;
+}
+
+.DVDatosFormularioNP
+{
+	background-image: url(../imagenes/menu_datos.png);
+	background-repeat: no-repeat;
+}
+
+.DVDatosFormularioNP_ODT5
+{
+	background-image: url(../imagenes/menu_datos_ODT5_sd.png);
+	background-repeat: no-repeat;
+}
+
+#DVResultadoPMT
+{
+	float: left;
+	width: 900px;
+	height: 186px;
+	background-image: url(../imagenes/resultado_medio.png);
+}
+
+#DVResultadoPMTNP
+{
+	float: left;
+	width: 900px;
+	height: 71px;
+	background-image: url(../imagenes/campo_saldo_acumu.png);
+}
+
+#DVResultadoPMT_2
+{
+	float: left;
+	width: 100%;
+	height: 74px;
+	/*background-image: url(../imagenes/resultado_medio_4.png);*/
+}
+
+.DVResultadoPMT_2_1
+{
+	background-image: url(../imagenes/resultado_medio_4.png);
+}
+
+.DVResultadoPMT_2_2
+{
+	background-image: url(../imagenes/2_negativa-de-pension_ODT.png);
+}
+
+#DVResultadoPMT_2NP
+{
+	float: left;
+	width: 100%;
+	height: 74px;
+	/*background-image: url(../imagenes/2_negativa-de-pension.png);*/
+}
+
+.DVResultadoPMT_2NP
+{
+	background-image: url(../imagenes/2_negativa-de-pension.png);
+	background-repeat: no-repeat;
+}
+
+.DVResultadoPMT_2NP_ODT
+{
+	background-image: url(../imagenes/img_PT.png);
+	background-repeat: no-repeat;
+}
+
+#DVResultadoAV
+{
+	float: left;
+	width: 100%;
+	overflow: hidden;
+	/*background-color:#FAFAFA;*/
+}
+
+#DVPMG
+{
+	float: left;
+	width: 100%;
+	overflow: hidden;
+}
+
+.gvAhorroVoluntario
+{
+	float: left;
+	margin-left: 0px;
+	margin-top: 0px;
+	width: 100%;
+}
+
+#DVDatosProporcionados
+{
+	float: left;
+}
+
+#DVDatosProporcionadosNP
+{
+	float: left;
+}
+
+#DVDatosProporcionados p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #0FAFAB;
+}
+
+#DVDatosProporcionadosNP p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #0FAFAB;
+}
+
+#DVDatosResultados
+{
+	float: left;
+}
+
+#DVDatosResultadosNP
+{
+	float: left;
+}
+
+#DVDatosResultados p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #0FAFAB;
+}
+
+#DVDatosResultadosNP p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #0FAFAB;
+}
+
+#DVDatosTePareceSuficiente
+{
+	float: left;
+	vertical-align: text-bottom;
+}
+
+
+#DVDatosTePareceSuficienteNP
+{
+	float: left;
+}
+
+#DVDatosTePareceSuficiente p
+{
+	font-family: robotoregular;
+	font-size: 17px;
+	font-weight: bold;
+	color: #0FAFAB;
+}
+
+#DVDatosTePareceSuficiente_2 p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #0FAFAB;
+}
+
+#DVDatosTePareceSuficienteNP p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #0FAFAB;
+}
+
+#DVSalarioBaseCotizacionMensualR
+{
+	float: left;
+	width: 16%;
+	height: 80px;
+}
+
+/*#DVSalarioBaseCotizacionMensualRNP
+{
+	float: left;
+	width: 16%;
+	height: 80px;
+}*/
+.DVSalarioBaseCotizacionMensualRNP
+{
+	float: left;
+	width: 16%;
+	height: 80px;
+}
+
+#DVSaldoActualAforeR
+{
+	float: left;
+	width: 12.8%;
+	height: 80px;
+}
+
+#DVSaldoActualAforeRNP
+{
+	float: left;
+	width: 12.8%;
+	height: 80px;
+}
+
+#DVGeneroR
+{
+	float: left;
+	width: 8.8%;
+	height: 80px;
+}
+
+/*#DVGeneroRNP
+{
+	float: left;
+	width: 8.8%;
+	height: 80px;
+}*/
+.DVGeneroRNP
+{
+	float: left;
+	width: 8.8%;
+	height: 80px;
+}
+#DVEdadR
+{
+	float: left;
+	width: 9.6%;
+	height: 80px;
+}
+
+/*#DVEdadRNP
+{
+	float: left;
+	width: 9.6%;
+	height: 80px;
+}*/
+.DVEdadRNP
+{
+	float: left;
+	width: 9.6%;
+	height: 80px;
+}
+
+#DVEdadRetiroR
+{
+	float: left;
+	width: 10.6%;
+	height: 80px;
+}
+
+/*#DVEdadRetiroRNP
+{
+	float: left;
+	width: 10.6%;
+	height: 80px;
+}*/
+.DVEdadRetiroRNP
+{
+	float: left;
+	width: 10.6%;
+	height: 80px;
+}
+
+#DVAniosCotizadosR
+{
+	float: left;
+	width: 11.6%;
+	height: 80px;
+}
+
+/*#DVAniosCotizadosRNP
+{
+	float: left;
+	width: 11.6%;
+	height: 80px;
+}*/
+.DVAniosCotizadosRNP
+{
+	float: left;
+	width: 11.6%;
+	height: 80px;
+}
+
+#DVRendimientoRealAntesComisionesR
+{
+	float: left;
+	width: 17.3%;
+	height: 80px;
+}
+
+/*#DVRendimientoRealAntesComisionesRNP
+{
+	float: left;
+	width: 17.3%;
+	height: 80px;
+}*/
+.DVRendimientoRealAntesComisionesRNP
+{
+	float: left;
+	width: 17.3%;
+	height: 80px;
+}
+
+
+#DVDensidadCotizacionR
+{
+	float: left;
+	width: 12%;
+	height: 80px;
+}
+
+#DVDensidadCotizacionRNP
+{
+	float: left;
+	width: 12%;
+	height: 80px;
+}
+
+
+.lblSalarioBaseCotizacionMensualR
+{
+	float: right;
+	margin-top: 45px;
+	margin-right: 30px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+.lblSaldoActualAforeR
+{
+	float: right;
+	margin-top: 45px;
+	margin-right: 5px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+.imgGeneroR
+{
+	float: right;
+	margin-top: 39px;
+	margin-right: 30px;
+	font-weight: normal;
+	width: 14px;
+}
+
+.lblEdadR
+{
+	float: right;
+	margin-top: 45px;
+	margin-right: 30px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+.lblEdadRetiroR
+{
+	float: right;
+	margin-top: 45px;
+	margin-right: 30px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+.lblAniosCotizadosR
+{
+	float: right;
+	margin-top: 45px;
+	margin-right: 35px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+.lblRendimientoRealAntesComisionesR
+{
+	float: right;
+	margin-top: 45px;
+	margin-right: 50px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+.lblDensidadCotizacionR
+{
+	float: right;
+	margin-top: 45px;
+	margin-right: 20px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+
+.checkbox
+{
+	margin-left: 10px;
+	margin-top: 25px;
+}
+
+
+#DVCalculadora-Pie
+{
+	width: 100%;
+	height: 100px;
+	float: left;
+	margin-top: 30px;
+}
+
+
+.lblSaldoAcumuladoR
+{
+	float: right;
+	margin-top: 16px;
+	/*margin-right:70px;*/
+	font-family: robotoregular;
+	font-size: 18px;
+	font-weight: bold;
+	color: #00ACAA;
+}
+
+.lblPensionMensualEstimadaR
+{
+	float: right;
+	margin-top: 15px;
+	/*margin-right:70px;*/
+	font-family: robotoregular;
+	font-size: 18px;
+	font-weight: bold;
+	color: #00ACAA;
+}
+
+.lblPorcentajePensionMensualR
+{
+	float: right;
+	margin-top: 15px;
+	/*margin-right:70px;*/
+	font-family: robotoregular;
+	font-size: 18px;
+	font-weight: bold;
+	color: #00ACAA;
+}
+
+.lblPMG_Menor100
+{
+	text-align: justify;
+	font-family: robotoregular;
+	font-size: 10px;
+	font-weight: normal;
+	margin: 0px 10px 0px 25px;
+	color: #5b5656;
+	/*width: 90%;*/
+	float: left;
+	position: relative;
+	top: 20px;
+	padding-left: 100px;
+}
+
+.lblPMG_Mayor100
+{
+	text-align: justify;
+	font-family: robotoregular;
+	font-size: 19px;
+	font-weight: normal;
+	margin: 0px 10px 0px 25px;
+	color: #5b5656;
+	/*width: 90%;*/
+	float: left;
+	position: relative;
+	top: 20px;
+}
+
+.lblPMG
+{
+	float: left;
+}
+
+.lblPMG_100
+{
+	float: none;
+}
+
+.spanNotaPMG
+{
+	font-size: 12px;
+}
+
+.spanNotaPMG_100
+{
+	font-size: 20px;
+}
+
+.texto
+{
+	text-align: center;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+.textochico
+{
+	text-align: center;
+	font-family: robotoregular;
+	font-size: 12px;
+	font-weight: bold;
+	padding-top: 15px;
+	margin-right: 5px;
+	color: #5b5656;
+}
+
+#tblTablaResultado
+{
+	float: left;
+	border: 1px solid #808080;
+	border-collapse: collapse;
+	margin-top: 40px;
+	background-color: #FAFAFA;
+}
+
+	#tblTablaResultado th
+	{
+		border: 1px solid #808080;
+		text-align: center;
+		color: #ffffff;
+		font-family: robotoregular;
+		font-size: 15px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		background-color: #0FAFAB;
+		border: 1px solid #ffffff;
+		border-collapse: collapse;
+	}
+
+	#tblTablaResultado td
+	{
+		border: 1px solid #808080;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-family: robotoregular;
+		font-size: 15px;
+		font-weight: bold;
+		color: #5b5656;
+	}
+
+
+#tblTablaResultadoNP
+{
+	float: left;
+	/*border: 1px solid #808080; border-collapse: collapse;*/
+	/*margin-top:40px;*/
+	background-color: #FAFAFA;
+	width: 900px;
+}
+
+#tblTablaResultadoNP_ODT5
+{
+	float: left;
+	/*border: 1px solid #808080; border-collapse: collapse;*/
+	/*margin-top:40px;*/
+	background-color: #FAFAFA;
+	width: 536px;
+}
+
+	#tblTablaResultadoNP_ODT5 td
+	{
+		border: 1px solid #808080;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-family: robotoregular;
+		font-size: 15px;
+		font-weight: bold;
+		color: #5b5656;
+	}
+/*#tblTablaResultadoNP th {
+    border: 1px solid #808080;
+    text-align:center;
+    color: #ffffff;
+    font-family:robotoregular;
+    font-size:15px;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color: #0FAFAB;
+    border: 1px solid #ffffff; border-collapse: collapse;
+}*/
+
+.RegistrostablaNP
+{
+	border: 1px solid #808080;
+	text-align: center;
+	color: #ffffff;
+	font-family: robotoregular;
+	font-size: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #0FAFAB;
+	border: 1px solid #ffffff;
+	border-collapse: collapse;
+}
+
+#tblTablaResultadoNP td
+{
+	border: 1px solid #808080;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: #5b5656;
+}
+
+
+
+
+/*Barra de porcentaje*/
+.indicadorBarra
+{
+	position: relative;
+	left: 83px;
+}
+
+.indicadorBarra10
+{
+	bottom: 125px;
+}
+
+.indicadorBarra20
+{
+	bottom: 152px;
+}
+
+.indicadorBarra30
+{
+	bottom: 180px;
+}
+
+.indicadorBarra40
+{
+	bottom: 205px;
+}
+
+.indicadorBarra50
+{
+	bottom: 231px;
+}
+
+.indicadorBarra60
+{
+	bottom: 259px;
+}
+
+.indicadorBarra70
+{
+	bottom: 285px;
+}
+
+.indicadorBarra80
+{
+	bottom: 311px;
+}
+
+.indicadorBarra90
+{
+	bottom: 337px;
+}
+
+.indicadorBarra100
+{
+	bottom: 364px;
+}
+
+
+/*Grafica*/
+
+.dvGrafica
+{
+	width: 338px;
+	height: 328px;
+	background-image: url(../imagenes/tabla_grafica.png);
+	background-repeat: no-repeat;
+	margin: 0 auto;
+}
+
+.porcentaje
+{
+	border: 0;
+	color: #5b5656;
+	font-weight: bold;
+	font-size: 16px;
+	width: 80px;
+	margin-left: 15px;
+	text-align: center;
+	background-color: transparent;
+}
+
+.pension
+{
+	border: 0;
+	color: #5b5656;
+	font-weight: bold;
+	font-size: 16px;
+	width: 70px;
+	margin-left: 15px;
+	text-align: center;
+	background-color: transparent;
+}
+
+#barraGrafica
+{
+	z-index: 1;
+	position: relative;
+	left: 100px;
+	top: 38px;
+	height: 247px;
+	width: 150px;
+}
+
+#barraGraficaProgreso
+{
+	background: #1FA99E;
+	z-index: 2;
+	position: relative;
+	width: 150px;
+}
+
+.barraGraficaProgreso10
+{
+	height: 24px;
+	top: 224px;
+}
+
+.barraGraficaProgreso20
+{
+	height: 49px;
+	top: 198px;
+}
+
+.barraGraficaProgreso30
+{
+	height: 75px;
+	top: 172px;
+}
+
+.barraGraficaProgreso40
+{
+	height: 100px;
+	top: 148px;
+}
+
+.barraGraficaProgreso50
+{
+	height: 124px;
+	top: 123px;
+}
+
+.barraGraficaProgreso60
+{
+	height: 149px;
+	top: 99px;
+}
+
+.barraGraficaProgreso70
+{
+	height: 173px;
+	top: 74px;
+}
+
+.barraGraficaProgreso80
+{
+	height: 199px;
+	top: 49px;
+}
+
+.barraGraficaProgreso90
+{
+	height: 223px;
+	top: 24px;
+}
+
+.barraGraficaProgreso100
+{
+	height: 247px;
+	top: 0px;
+}
+
+.imgProgresoBarra
+{
+	position: relative;
+	right: -12px;
+	bottom: 25px;
+}
+
+.porcentajeFlotante
+{
+	position: relative;
+	right: -22px;
+	bottom: 100px;
+}
+
+.pensionFlotante
+{
+	position: relative;
+	bottom: 72px;
+	right: -22px;
+}
+
+#DVResultado-Pie
+{
+	width: 100%;
+	height: 160px;
+	float: left;
+	margin-top: 50px;
+}
+
+#DVResultado-PieNP
+{
+	width: 100%;
+	height: 260px;
+	float: left;
+	margin-top: 30px;
+}
+
+
+/*#DVPieTexto
+{
+    width: 70%;
+    height: 100px;
+}*/
+
+/*.PieTexto
+{
+    font-size: 14px;
+    margin-top: 0px;
+    text-align: justify;
+}*/
+
+/*.DVCalcular
+{
+    width: 30%;
+    height: 100px;
+}*/
+
+#DVCalcular-Resultado
+{
+	float: left;
+	width: 30%;
+	height: 50px;
+}
+
+#DVCalcular-ResultadoNP
+{
+	float: left;
+	width: 30%;
+	height: 50px;
+}
+
+#DVMensajesFinales
+{
+	float: left;
+	width: 70%;
+	height: 50px;
+}
+
+#DVMensajesFinalesNP
+{
+	float: left;
+	width: 70%;
+	height: 50px;
+}
+
+#DVMensajesFinales p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	color: #5b5656;
+	text-align: justify;
+}
+
+.NotasNP
+{
+	float: left;
+	width: 90%;
+	height: 50px;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	color: #5b5656;
+	text-align: justify;
+	margin-top: 20px;
+	margin-left: 30px;
+	height: 100px;
+}
+
+#DVMensajesFinalesNP p
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	color: #5b5656;
+	text-align: justify;
+}
+
+#DVAhorroAdicional
+{
+	position: absolute;
+	top: 255px;
+	width: 100%;
+	z-index: 999;
+	color: #1A9381;
+	font-size: 12px;
+	text-align: center;
+}
+
+	#DVAhorroAdicional p
+	{
+		font-family: robotoregular;
+		font-size: 15px;
+		font-weight: normal;
+		color: #5b5656;
+	}
+
+
+.rightCal
+{
+	float: right;
+}
+
+.leftCal
+{
+	float: left;
+}
+
+.cursorHand
+{
+	cursor: pointer;
+}
+
+
+/*Visibilidad Paneles*/
+
+.panelVisible
+{
+	display: block;
+}
+
+.panelOculto
+{
+	display: none;
+}
+
+
+
+
+#cargando
+{
+	width: 150px;
+	height: 150px;
+	clear: both;
+	background-image: url(../imagenes/cargandoPaginaWeb.gif);
+	margin: 200px auto;
+}
+
+/*.dataPopUp {
+    width:50px; 
+    height:50px; 
+    overflow: scroll;
+    width:287px;
+    height:108px;
+}*/
+
+.CentradoCalc
+{
+	width: 988px;
+	margin-left: 0;
+	margin-right: auto;
+}
+
+.TextoDescripcion
+{
+	text-align: justify;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	margin: 20px 20px 10px 20px;
+	color: #5b5656;
+}
+
+.TrabajadorIMSS
+{
+	background-image: url(../imagenes/btn_imss_1-01.png);
+	width: 200px;
+	height: 84px;
+	float: left;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+
+	.TrabajadorIMSS:hover
+	{
+		background-image: url(../imagenes/btn_imss_2.png);
+	}
+
+.TrabajadorIndependiente
+{
+	background-image: url(../imagenes/btn_indepen_1-01.png);
+	width: 200px;
+	height: 84px;
+	margin-left: 30px;
+	float: left;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+
+	.TrabajadorIndependiente:hover
+	{
+		background-image: url(../imagenes/btn_indepen_2-01.png);
+		width: 200px;
+		height: 84px;
+		margin-left: 30px;
+	}
+
+.SeleccionCalculadora
+{
+	width: 600px;
+	padding-top: 50px;
+	padding-bottom: 200px;
+	clear: both;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.EtiquetaAhorroNP
+{
+	border: 0px;
+	text-align: center;
+	color: #808080;
+	font-family: robotoregular;
+	font-size: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #ececec;
+}
+
+.EtiquetaSaldoNP
+{
+	border: 0px;
+	text-align: center;
+	color: #808080;
+	font-family: robotoregular;
+	font-size: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #ececec;
+}
+
+.InformacionTabla
+{
+	border: 0px;
+	text-align: center;
+	color: #808080;
+	font-family: robotoregular;
+	font-size: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #ececec;
+}
+
+.GeneracionTransicionImage
+{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url(../imagenes/generacion_transicion.png);
+	width: 465px;
+	height: 215px;
+}
+
+
+
+/*Estilos para calculadora de trabajaores independientes*/
+
+#CapturaIndependientes
+{
+	/*margin-top: 15px;
+    margin-right:78px;*/
+	width: 900px;
+	height: 168px;
+	background-image: url(../imagenes/datos_indepen.png);
+	float: left;
+}
+
+.SeleccionEdad
+{
+	height: 20px;
+	width: 20px;
+	position: relative;
+	top: 4px;
+}
+
+
+.textoDescripcionFormulario
+{
+	text-align: justify;
+	font-family: robotoregular;
+	/*margin: 20px 20px 10px 20px;*/
+	color: #3A475A;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.textoSaldoFormulario
+{
+	text-align: justify;
+	font-family: robotoregular;
+	/*margin: 20px 20px 10px 20px;*/
+	color: #3A475A;
+	font-size: 16px;
+	font-weight: 900;
+	/*color: red;*/
+}
+
+.txtFormulario
+{
+	height: 25px;
+	text-align: center;
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: bold;
+	color: black;
+	border: none;
+	background-color: transparent;
+}
+
+#dvContenedorResultado
+{
+	width: 900px;
+	overflow: hidden;
+	/*border: 1px solid red;*/
+	background-color: transparent;
+	float: left;
+	margin-left: 40px;
+}
+
+#dvAhorroEstimado
+{
+	background-image: url(../imagenes/flecha_resultado.png);
+	width: 900px;
+	height: 62px;
+	float: left;
+}
+
+#dvAportacionVoluntaria
+{
+	background-image: url(../imagenes/av_independientes.png);
+	width: 900px;
+	height: 310px;
+	float: left;
+}
+
+.MarcaListaAR
+{
+	color: #1F497D;
+}
+
+.TextoMorado
+{
+	text-align: justify;
+	font-family: robotoregular;
+	margin: 20px 20px 10px 20px;
+	font-size: 20px;
+	color: #583682;
+	font-weight: 700;
+}
+
+.text_Modales_Indi
+{
+	font-size: 1em;
+	color: #414040;
+	text-align: justify;
+}
+
+	.text_Modales_Indi a:link
+	{
+		color: blue;
+	}
+
+	.text_Modales_Indi a:visited
+	{
+		color: blue;
+	}
+
+	.text_Modales_Indi a:hover
+	{
+		color: purple;
+	}
+
+.ligaMetodologia
+{
+	position: relative;
+	top: 30px;
+}
+
+.RegresaInicio
+{
+	background-image: url(../imagenes/inicio.gif);
+	width: 99px;
+	height: 32px;
+	float: left;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+
+
+.TextoDescripcion a:link
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	text-align: justify;
+	color: #5b5656;
+}
+
+.TextoDescripcion a:hover
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	text-align: justify;
+	color: #5b5656;
+}
+
+.TextoDescripcion a:visited
+{
+	font-family: robotoregular;
+	font-size: 15px;
+	font-weight: normal;
+	text-align: justify;
+	color: #5b5656;
+}
+
+
+/*input, textarea { color: #000; }
+.placeholder { color: #aaa; }*/
+
+
+#loadingDiv
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 900px;
+	height: 100%;
+	background-color: transparent;
+	background-image: url(../imagenes/cargandopaginaweb_57331.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 10000000;
+	opacity: 1.0;
+	filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+/*Estilos para centrar DVs de */
+.DVSalarioBaseCotizacionMensualRNP_sd{
+	Width:19.2%;
+	float: left;
+	height: 80px;
+	}
+.DVGeneroRNP_sd{
+	Width:10.7%;
+	float: left;
+	height: 80px;
+	}
+.DVEdadRNP_sd{
+	Width:11.6%;
+	float: left;	
+	height: 80px;
+	}
+.DVEdadRetiroRNP_sd{
+	Width:12.5%;
+	float: left;	
+	height: 80px;
+	}
+
+.DVAniosCotizadosRNP_sd{
+	Width:14%;
+	float: left;	
+	height: 80px;
+	}
+.DVRendimientoRealAntesComisionesRNP_sd{
+	Width:20%;
+	float: left;	
+	height: 80px;
+	}
+
+.DVCentraResultadosPT_sd{
+	margin: 0px auto; 
+	width: 750px; 
+}

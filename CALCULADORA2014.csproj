@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37D158AC-2841-44F1-BCF5-E74E9C71E6C4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CALCULADORA2014</RootNamespace>
+    <AssemblyName>CALCULADORA2014</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.7.1213, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLL\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CalculadoraIMSSmobil.aspx" />
+    <Content Include="CalculadoraIndi.aspx" />
+    <Content Include="CalculoApp.asmx" />
+    <Content Include="colorbox-master\content\ajax.html" />
+    <Content Include="colorbox-master\content\daisy%402x.jpg" />
+    <Content Include="colorbox-master\content\daisy.jpg" />
+    <Content Include="colorbox-master\content\homer.jpg" />
+    <Content Include="colorbox-master\content\marylou.jpg" />
+    <Content Include="colorbox-master\content\ohoopee1.jpg" />
+    <Content Include="colorbox-master\content\ohoopee2.jpg" />
+    <Content Include="colorbox-master\content\ohoopee3.jpg" />
+    <Content Include="colorbox-master\example1\colorbox.css" />
+    <Content Include="colorbox-master\example1\images\border.png" />
+    <Content Include="colorbox-master\example1\images\controls.png" />
+    <Content Include="colorbox-master\example1\images\loading.gif" />
+    <Content Include="colorbox-master\example1\images\loading_background.png" />
+    <Content Include="colorbox-master\example1\images\overlay.png" />
+    <Content Include="colorbox-master\example1\index.html" />
+    <Content Include="colorbox-master\example2\colorbox.css" />
+    <Content Include="colorbox-master\example2\images\controls.png" />
+    <Content Include="colorbox-master\example2\images\loading.gif" />
+    <Content Include="colorbox-master\example2\index.html" />
+    <Content Include="colorbox-master\example3\colorbox.css" />
+    <Content Include="colorbox-master\example3\images\controls.png" />
+    <Content Include="colorbox-master\example3\images\loading.gif" />
+    <Content Include="colorbox-master\example3\index.html" />
+    <Content Include="colorbox-master\example4\colorbox.css" />
+    <Content Include="colorbox-master\example4\colorboxcontacto.css" />
+    <Content Include="colorbox-master\example4\images\border1.png" />
+    <Content Include="colorbox-master\example4\images\border2.png" />
+    <Content Include="colorbox-master\example4\images\loading.gif" />
+    <Content Include="colorbox-master\example4\index.html" />
+    <Content Include="colorbox-master\example5\colorbox.css" />
+    <Content Include="colorbox-master\example5\images\border.png" />
+    <Content Include="colorbox-master\example5\images\controls.png" />
+    <Content Include="colorbox-master\example5\images\loading.gif" />
+    <Content Include="colorbox-master\example5\images\loading_background.png" />
+    <Content Include="colorbox-master\example5\index.html" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-ar.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-bg.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-ca.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-cs.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-da.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-de.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-es.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-et.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-fa.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-fi.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-fr.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-gl.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-gr.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-he.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-hr.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-hu.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-id.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-it.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-ja.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-kr.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-lt.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-lv.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-my.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-nl.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-no.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-pl.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-pt-br.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-ro.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-ru.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-si.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-sk.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-sr.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-sv.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-tr.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-uk.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-zh-CN.js" />
+    <Content Include="colorbox-master\i18n\jquery.colorbox-zh-TW.js" />
+    <Content Include="colorbox-master\jquery.colorbox-min.js" />
+    <Content Include="colorbox-master\jquery.colorbox.js" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\bootstrap.png" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.css" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\css\bootstrap.css" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\css\bootstrap.min.css" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.js" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.min.js" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Content\bootstrap-grid.css" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Content\bootstrap-grid.min.css" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Content\bootstrap-reboot.css" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Content\bootstrap-reboot.min.css" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Content\bootstrap.css" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Content\bootstrap.min.css" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Scripts\bootstrap.bundle.js" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Scripts\bootstrap.bundle.min.js" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Scripts\bootstrap.js" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Scripts\bootstrap.min.js" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\LICENSE.txt" />
+    <None Include="ContentScripts\jQuery.3.0.0\Content\Scripts\jquery-3.0.0-vsdoc.js" />
+    <Content Include="ContentScripts\jQuery.3.0.0\Content\Scripts\jquery-3.0.0.js" />
+    <Content Include="ContentScripts\jQuery.3.0.0\Content\Scripts\jquery-3.0.0.min.js" />
+    <Content Include="ContentScripts\jQuery.3.0.0\Content\Scripts\jquery-3.0.0.slim.js" />
+    <Content Include="ContentScripts\jQuery.3.0.0\Content\Scripts\jquery-3.0.0.slim.min.js" />
+    <None Include="ContentScripts\jQuery.3.0.0\Tools\jquery-3.0.0.intellisense.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\esm\popper-utils.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\esm\popper-utils.min.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\esm\popper.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\esm\popper.min.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\index.d.ts" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\popper-utils.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\popper-utils.min.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\popper.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\popper.min.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\index.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\methods\defaults.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\methods\destroy.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\methods\disableEventListeners.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\methods\enableEventListeners.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\methods\placements.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\methods\update.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\modifiers\applyStyle.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\modifiers\arrow.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\modifiers\computeStyle.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\modifiers\flip.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\modifiers\hide.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\modifiers\index.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\modifiers\inner.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\modifiers\keepTogether.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\modifiers\offset.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\modifiers\preventOverflow.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\modifiers\shift.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\clockwise.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\computeAutoPlacement.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\debounce.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\find.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\findCommonOffsetParent.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\findIndex.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getBordersSize.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getBoundaries.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getBoundingClientRect.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getClientRect.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getFixedPositionOffsetParent.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getOffsetParent.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getOffsetRect.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getOppositePlacement.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getOppositeVariation.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getOuterSizes.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getParentNode.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getPopperOffsets.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getReferenceNode.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getReferenceOffsets.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getRoot.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getRoundedOffsets.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getScroll.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getScrollParent.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getStyleComputedProperty.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getSupportedPropertyName.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getWindow.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\getWindowSizes.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\includeScroll.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\index.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\isBrowser.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\isFixed.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\isFunction.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\isIE.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\isModifierEnabled.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\isModifierRequired.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\isNumeric.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\isOffsetContainer.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\removeEventListeners.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\runModifiers.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\setAttributes.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\setStyles.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\src\utils\setupEventListeners.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\umd\popper-utils.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\umd\popper-utils.min.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\umd\popper.js" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\umd\popper.min.js" />
+    <Content Include="css\StyleCalcInde.css" />
+    <Content Include="imagenes\2_negativa-de-pension.png" />
+    <Content Include="css\Calendar.css" />
+    <Content Include="imagenes\2_negativa-de-pension_2.png" />
+    <Content Include="imagenes\AhorrasLosSuficiente.png" />
+    <Content Include="imagenes\btn_inicio.png" />
+    <Content Include="imagenes\btn_inicio2.png" />
+    <Content Include="imagenes\Cafe.png" />
+    <Content Include="imagenes\CaminoMejorPension.png" />
+    <Content Include="imagenes\campo_saldo_acumu.png" />
+    <Content Include="css\Sliders.css" />
+    <Content Include="css\Style.css" />
+    <Content Include="css\validate\template.css" />
+    <Content Include="css\validate\validationEngine.jquery.css" />
+    <Content Include="DLL\AjaxControlToolkit.dll" />
+    <Content Include="DLL\AjaxMin.dll" />
+    <Content Include="imagenes\afore.png" />
+    <Content Include="imagenes\barra.png" />
+    <Content Include="imagenes\barra_tasa_vertical.png" />
+    <Content Include="imagenes\boton_barra.png" />
+    <Content Include="imagenes\bot_calcu.png" />
+    <Content Include="imagenes\btn_calcula2.1.png" />
+    <Content Include="imagenes\btn_calcula2.png" />
+    <Content Include="imagenes\btn_imss_1-01.png" />
+    <Content Include="imagenes\btn_imss_2.png" />
+    <Content Include="imagenes\btn_indepen_1-01.png" />
+    <Content Include="imagenes\btn_indepen_2-01.png" />
+    <Content Include="imagenes\cargandoPaginaWeb.gif" />
+    <Content Include="imagenes\cargandopaginaweb_57331.gif" />
+    <Content Include="imagenes\Cerdo.png" />
+    <Content Include="imagenes\Cerveza.png" />
+    <Content Include="imagenes\Cigarros.png" />
+    <Content Include="imagenes\Cine.png" />
+    <Content Include="imagenes\cintrans.png" />
+    <Content Include="imagenes\cintrans1.png" />
+    <Content Include="imagenes\datos.png" />
+    <Content Include="imagenes\datos_proporcionados.gif" />
+    <Content Include="imagenes\desplegable_1.png" />
+    <Content Include="imagenes\desplegable_2.png" />
+    <Content Include="imagenes\desplegable_2_grande.png" />
+    <Content Include="imagenes\Dinero.png" />
+    <Content Include="imagenes\encabezado.png" />
+    <Content Include="imagenes\encabezado_entrada.png" />
+    <Content Include="imagenes\encabezado_imss.png" />
+    <Content Include="imagenes\encabezado_independientes.png" />
+    <Content Include="imagenes\encabezado_mejora_NP.png" />
+    <Content Include="imagenes\FastFood.png" />
+    <Content Include="imagenes\fdotrheaderNP.png" />
+    <Content Include="imagenes\fdotrheaderNPGris.png" />
+    <Content Include="imagenes\fdotrheaderNPGrisIzq.png" />
+    <Content Include="imagenes\fdotrheaderNPIzq.png" />
+    <Content Include="imagenes\FlechaGHDer.png" />
+    <Content Include="imagenes\FlechaGHIzq.png" />
+    <Content Include="imagenes\fondo.gif" />
+    <Content Include="imagenes\fondo.png" />
+    <Content Include="imagenes\fondoNotificacion.png" />
+    <Content Include="imagenes\G2-Leyendas.png" />
+    <Content Include="imagenes\G2Leyendas.png" />
+    <Content Include="imagenes\generacion_transicion.png" />
+    <Content Include="imagenes\globo-chico-2.png" />
+    <Content Include="imagenes\globo-chico-2_pmg.png" />
+    <Content Include="imagenes\globo-chico.png" />
+    <Content Include="imagenes\globo-grande.png" />
+    <Content Include="imagenes\globo-mediano.png" />
+    <Content Include="imagenes\globo.png" />
+    <Content Include="imagenes\hombre.gif" />
+    <Content Include="imagenes\hombre.png" />
+    <Content Include="imagenes\ico-satisfation-good %281%29.jpg" />
+    <Content Include="imagenes\IconsModal\ico-satisfaction-bad.jpg" />
+    <Content Include="imagenes\IconsModal\ico-satisfaction-regular.jpg" />
+    <Content Include="imagenes\IconsModal\ico-satisfation-good.svg" />
+    <Content Include="imagenes\IconsModal\Opinion.png" />
+    <Content Include="imagenes\ImagenFlecha.png" />
+    <Content Include="imagenes\Imagen_EdoCta-Cal_IMSS.png" />
+    <Content Include="imagenes\Imagen_EdoCta-Cal_IMSS_2.png" />
+    <Content Include="imagenes\ingresa_tusdatos.png" />
+    <Content Include="imagenes\insti_imss.jpg" />
+    <Content Include="imagenes\i_grande.png" />
+    <Content Include="imagenes\i_peque.png" />
+    <Content Include="imagenes\menu_datos.png" />
+    <Content Include="imagenes\mujer.gif" />
+    <Content Include="imagenes\mujer.png" />
+    <Content Include="imagenes\otro_ejerc1.png" />
+    <Content Include="imagenes\otro_ejerc2.png" />
+    <Content Include="imagenes\PensionMensualEstimada.png" />
+    <Content Include="imagenes\PensionMensualEstimadaChico.png" />
+    <Content Include="imagenes\PensionMensualEstimadaChico2.png" />
+    <Content Include="imagenes\PequenosEsfuerzos.png" />
+    <Content Include="imagenes\Punta.png" />
+    <Content Include="imagenes\Regresar.png" />
+    <Content Include="imagenes\Regresar2.png" />
+    <Content Include="imagenes\RendimientosNetosFuturos.png" />
+    <Content Include="imagenes\resultados_medio.png" />
+    <Content Include="imagenes\resultado_medio-01.png" />
+    <Content Include="imagenes\resultado_medio.png" />
+    <Content Include="imagenes\SaldoActual.png" />
+    <Content Include="imagenes\SaldoAcumuladoAlRetiro.png" />
+    <Content Include="imagenes\SaldoAcumuladoAlRetiro2.png" />
+    <Content Include="imagenes\SaldoAcumuladoAlRetiro_2.png" />
+    <Content Include="imagenes\Sombra.png" />
+    <Content Include="imagenes\tabla_comisiones.png" />
+    <Content Include="CalculadoraIMSS.aspx" />
+    <Content Include="imagenes\tabla_grafica-10.png" />
+    <Content Include="imagenes\tabla_grafica-100.png" />
+    <Content Include="imagenes\tabla_grafica-20.png" />
+    <Content Include="imagenes\tabla_grafica-30.png" />
+    <Content Include="imagenes\tabla_grafica-40.png" />
+    <Content Include="imagenes\tabla_grafica-50.png" />
+    <Content Include="imagenes\tabla_grafica-60.png" />
+    <Content Include="imagenes\tabla_grafica-70.png" />
+    <Content Include="imagenes\tabla_grafica-80.png" />
+    <Content Include="imagenes\tabla_grafica-90.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-10.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-100.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-15.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-20.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-25.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-30.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-35.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-40.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-45.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-50.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-55.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-60.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-65.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-70.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-75.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-80.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-85.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-90.png" />
+    <Content Include="imagenes\tabla_grafica-cilindro1-95.png" />
+    <Content Include="imagenes\tabla_grafica.png" />
+    <Content Include="imagenes\tabla_grafica2.png" />
+    <Content Include="imagenes\tabla_grafica_.png" />
+    <Content Include="imagenes\Termometro.png" />
+    <Content Include="Inicio.aspx" />
+    <Content Include="jquery.formatCurrency-1.4.0\jquery.formatCurrency-1.4.0.js" />
+    <Content Include="js\canvasjs.min.js" />
+    <Content Include="js\Chart.min.js" />
+    <Content Include="js\dx.chartjs.js" />
+    <Content Include="js\eventos.js" />
+    <Content Include="js\globos.js" />
+    <Content Include="js\globosCalcInde.js" />
+    <Content Include="js\jquery-1.11.1.min.js" />
+    <Content Include="js\jquery-1.11.2.js" />
+    <Content Include="js\jquery-1.7.2.js" />
+    <Content Include="js\jquery-1.7.2.min.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.maskedinput.min.js" />
+    <Content Include="js\jquery.placeholder.js" />
+    <Content Include="js\jquery.tools.min.js" />
+    <Content Include="js\ModalJS\ModalEncuesta.js" />
+    <Content Include="js\moneda.js" />
+    <Content Include="js\sliders.js" />
+    <Content Include="js\util.js" />
+    <Content Include="js\mensaje\main.js" />
+    <Content Include="css\Popup.css" />
+    <Content Include="js\mensaje\popup.js" />
+    <Content Include="js\mensaje\shBrushJScript.js" />
+    <Content Include="js\mensaje\shCore.js" />
+    <Content Include="js\validate\contrib\other-validations.js" />
+    <Content Include="js\validate\jquery.validationEngine.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-cz.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-da.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-de.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-en.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-es.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-et.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-fa.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-fi.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-fr.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-hr.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-hu.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-it.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-ja.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-nl.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-pl.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-pt.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-pt_BR.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-ro.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-ru.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-se.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-tr.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-vi.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-zh_CN.js" />
+    <Content Include="js\validate\languages\jquery.validationEngine-zh_TW.js" />
+    <Content Include="js\webmethods.js" />
+    <Content Include="js\webmethodsCalcInde.js" />
+    <Content Include="js\webmethodsMobil.js" />
+    <Content Include="notifyme-master\assets\css\base.css" />
+    <Content Include="notifyme-master\assets\css\BtnCerrarNotificacion.gif" />
+    <Content Include="notifyme-master\assets\css\BtnCerrarNotificacion2.gif" />
+    <Content Include="notifyme-master\assets\css\BtnCerrarNotificacion_2.gif" />
+    <Content Include="notifyme-master\assets\css\fondoNotificacion.png" />
+    <Content Include="notifyme-master\assets\css\notifyme.css" />
+    <Content Include="notifyme-master\assets\images.jpg" />
+    <Content Include="notifyme-master\assets\images\notifyme.png" />
+    <Content Include="notifyme-master\assets\js\jquery.js" />
+    <Content Include="notifyme-master\assets\js\modernizr.js" />
+    <Content Include="notifyme-master\assets\js\notifyme.js" />
+    <Content Include="notifyme-master\gulpfile.js" />
+    <Content Include="notifyme-master\index.html" />
+    <Content Include="PDF\Metodología_Calculadora_de_Retiro.pdf" />
+    <Content Include="tooltipster-master\css\themes\tooltipster-light.css" />
+    <Content Include="tooltipster-master\css\themes\tooltipster-noir.css" />
+    <Content Include="tooltipster-master\css\themes\tooltipster-punk.css" />
+    <Content Include="tooltipster-master\css\themes\tooltipster-shadow.css" />
+    <Content Include="tooltipster-master\css\tooltipster.css" />
+    <Content Include="tooltipster-master\css\tooltipsterCalcInde.css" />
+    <Content Include="tooltipster-master\demo\index.html" />
+    <Content Include="tooltipster-master\demo\map.png" />
+    <Content Include="tooltipster-master\demo\reset.css" />
+    <Content Include="tooltipster-master\demo\style.css" />
+    <Content Include="tooltipster-master\doc\css\prettify.css" />
+    <Content Include="tooltipster-master\doc\css\reset.css" />
+    <Content Include="tooltipster-master\doc\css\style.css" />
+    <Content Include="tooltipster-master\doc\images\browser-chrome.png" />
+    <Content Include="tooltipster-master\doc\images\browser-firefox.png" />
+    <Content Include="tooltipster-master\doc\images\browser-ie.png" />
+    <Content Include="tooltipster-master\doc\images\browser-opera.png" />
+    <Content Include="tooltipster-master\doc\images\browser-safari.png" />
+    <Content Include="tooltipster-master\doc\images\favicon.png" />
+    <Content Include="tooltipster-master\doc\images\icons\icomoon.svg" />
+    <Content Include="tooltipster-master\doc\images\large-background.jpg" />
+    <Content Include="tooltipster-master\doc\images\pattern-navy.png" />
+    <Content Include="tooltipster-master\doc\images\social.jpg" />
+    <Content Include="tooltipster-master\doc\images\spiderman.png" />
+    <Content Include="tooltipster-master\doc\images\tooltipster.svg" />
+    <Content Include="tooltipster-master\doc\js\jquery.jgfeed.js" />
+    <Content Include="tooltipster-master\doc\js\lang-css.js" />
+    <Content Include="tooltipster-master\doc\js\prettify.js" />
+    <Content Include="tooltipster-master\doc\js\scripts.js" />
+    <Content Include="tooltipster-master\index.html" />
+    <Content Include="tooltipster-master\js\jquery.tooltipster.js" />
+    <Content Include="tooltipster-master\js\jquery.tooltipster.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="webfontkit\generator_config.txt" />
+    <Content Include="webfontkit\roboto-regular-demo.html" />
+    <Content Include="webfontkit\specimen_files\easytabs.js" />
+    <Content Include="webfontkit\specimen_files\grid_12-825-55-15.css" />
+    <Content Include="webfontkit\specimen_files\specimen_stylesheet.css" />
+    <Content Include="webfontkit\stylesheet.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BDS_BITACORA_VISITAS.cs" />
+    <Compile Include="CalculadoraIMSSmobil.aspx.cs">
+      <DependentUpon>CalculadoraIMSSmobil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CalculadoraIMSSmobil.aspx.designer.cs">
+      <DependentUpon>CalculadoraIMSSmobil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CalculadoraIndi.aspx.cs">
+      <DependentUpon>CalculadoraIndi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CalculadoraIndi.aspx.designer.cs">
+      <DependentUpon>CalculadoraIndi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CalculoApp.asmx.cs">
+      <DependentUpon>CalculoApp.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Calculos\Negocio.cs" />
+    <Compile Include="Calculos\NegocioEntities.cs" />
+    <Compile Include="CLASESGenerales.cs" />
+    <Compile Include="CalculadoraIMSS.aspx.cs">
+      <DependentUpon>CalculadoraIMSS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CalculadoraIMSS.aspx.designer.cs">
+      <DependentUpon>CalculadoraIMSS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RNCalculadora.cs" />
+    <Compile Include="RNCalculadoraIndi.cs" />
+    <Compile Include="Util.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PDF\Metodología_Calculadora_de_Retiro_OLD.pdf" />
+    <Content Include="PDF\Metodología_Calculadora_Independientes.pdf" />
+    <Content Include="tooltipster-master\.gitignore" />
+    <Content Include="tooltipster-master\bower.json" />
+    <Content Include="tooltipster-master\doc\images\icons\icomoon.eot" />
+    <Content Include="tooltipster-master\doc\images\icons\icomoon.ttf" />
+    <Content Include="tooltipster-master\doc\images\icons\icomoon.woff" />
+    <Content Include="tooltipster-master\doc\images\icons\icomoond41d.eot" />
+    <Content Include="tooltipster-master\README.md" />
+    <Content Include="tooltipster-master\tooltipster.jquery.json" />
+    <Content Include="notifyme-master\.DS_Store" />
+    <Content Include="notifyme-master\.editorconfig" />
+    <Content Include="notifyme-master\.gitignore" />
+    <Content Include="notifyme-master\assets\.DS_Store" />
+    <Content Include="notifyme-master\assets\scss\base.scss" />
+    <Content Include="notifyme-master\assets\scss\notifyme.scss" />
+    <Content Include="notifyme-master\assets\scss\_layout.scss" />
+    <Content Include="notifyme-master\assets\scss\_mixins.scss" />
+    <Content Include="notifyme-master\assets\scss\_typo.scss" />
+    <Content Include="notifyme-master\assets\scss\_variables.scss" />
+    <Content Include="notifyme-master\bower.json" />
+    <Content Include="notifyme-master\package.json" />
+    <Content Include="notifyme-master\readme.md" />
+    <Content Include="colorbox-master\bower.json" />
+    <Content Include="colorbox-master\colorbox.ai" />
+    <Content Include="colorbox-master\colorbox.jquery.json" />
+    <Content Include="colorbox-master\README.md" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\.signature.p7s" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\bootstrap.4.5.0.nupkg" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.css.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\css\bootstrap-grid.min.css.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\css\bootstrap-reboot.css.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\css\bootstrap-reboot.min.css.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\css\bootstrap.css.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\css\bootstrap.min.css.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.bundle.js.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.bundle.min.js.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.js.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\contentFiles\any\any\wwwroot\js\bootstrap.min.js.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Content\bootstrap-grid.css.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Content\bootstrap-grid.min.css.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Content\bootstrap-reboot.css.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Content\bootstrap-reboot.min.css.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Content\bootstrap.css.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Content\bootstrap.min.css.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Scripts\bootstrap.bundle.js.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Scripts\bootstrap.js.map" />
+    <Content Include="ContentScripts\bootstrap.4.5.0\content\Scripts\bootstrap.min.js.map" />
+    <Content Include="ContentScripts\jQuery.3.0.0\.signature.p7s" />
+    <Content Include="ContentScripts\jQuery.3.0.0\Content\Scripts\jquery-3.0.0.min.map" />
+    <Content Include="ContentScripts\jQuery.3.0.0\Content\Scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="ContentScripts\jQuery.3.0.0\jQuery.3.0.0.nupkg" />
+    <Content Include="ContentScripts\jQuery.3.0.0\Tools\common.ps1" />
+    <Content Include="ContentScripts\jQuery.3.0.0\Tools\install.ps1" />
+    <Content Include="ContentScripts\jQuery.3.0.0\Tools\uninstall.ps1" />
+    <Content Include="ContentScripts\popper.js.1.16.0\.signature.p7s" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\esm\popper-utils.js.map" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\esm\popper.js.map" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\esm\popper.min.js.map" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\index.js.flow" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\popper-utils.js.map" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\popper-utils.min.js.map" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\popper.js.map" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\popper.min.js.map" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\README.md" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\umd\popper-utils.js.map" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\umd\popper.js.flow" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\umd\popper.js.map" />
+    <Content Include="ContentScripts\popper.js.1.16.0\content\Scripts\umd\popper.min.js.map" />
+    <Content Include="ContentScripts\popper.js.1.16.0\popper.js.1.16.0.nupkg" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CALCULADORA_IMSS.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="webfontkit\roboto-regular-webfont.eot" />
+    <Content Include="webfontkit\roboto-regular-webfont.svg" />
+    <Content Include="webfontkit\roboto-regular-webfont.ttf" />
+    <Content Include="webfontkit\roboto-regular-webfont.woff" />
+    <Content Include="webfontkit\roboto-regular-webfont.woff2" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6341</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50106/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
