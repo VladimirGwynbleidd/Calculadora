@@ -1274,7 +1274,7 @@
                                     <div class="row" style="padding: 10px;" align="center">
                                         <button id="btnEnviarEncuesta" style="color: #fff; background-color: #9D2449; border-color: #9D2449;" type="button" class="btn btn-primary">Enviar encuesta</button>
                                     </div>
-                                  
+
                                 </div>
                             </div>
 
@@ -1315,10 +1315,10 @@
                             <div class="form-group">
                                 <div class="col-md-12 respuesta"></div>
                                 <div class="modal-footer">
-                                      <div class="row" style="padding: 10px;" align="center">
+                                    <div class="row" style="padding: 10px;" align="center">
                                         <button style="color: #fff; background-color: #9D2449; border-color: #9D2449;" type="button" class="btn btn-primary">Enviar encuesta</button>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -1364,7 +1364,7 @@
                                     <div class="row" style="padding: 10px;" align="center">
                                         <button style="color: #fff; background-color: #9D2449; border-color: #9D2449;" type="button" class="btn btn-primary">Enviar encuesta</button>
                                     </div>
-                                  
+
                                 </div>
                             </div>
                         </div>
@@ -1402,7 +1402,7 @@
                 </div>
                 <div class="modal-footer btn-secondary" style="align-items: center">
                     <fieldset>
-                        <legend style="font-size: medium">Gracias por compartir tu experiencia y ayudarnos a mejorar</legend>
+                        <legend class="text-center" style="font-size: medium">¡Gracias por compartir tu experiencia y ayudarnos a mejorar!</legend>
                     </fieldset>
                 </div>
             </div>
