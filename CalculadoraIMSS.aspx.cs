@@ -47,6 +47,7 @@ namespace CALCULADORA2014
             set;
         }
 
+
         public double Cigarros { get; set; }
         public double Cerveza { get; set; }
         public double FastFood { get; set; }
@@ -441,6 +442,10 @@ namespace CALCULADORA2014
                     Double pComisionAfore = Convert.ToDouble(aParametros[8]);
                     Double pAportacion = Convert.ToDouble(aParametros[9]);
                     Double anioAfiliacion = Convert.ToDouble(aParametros[11]);
+
+                    //Se guarda la información de los datos de captura(Salario Base de Cotización mensual, Género, Edad, Año de afiliación) para ODT 09
+                    BDS_BITACORA_VISITAS objBitacora = new BDS_BITACORA_VISITAS(BDS_BITACORA_VISITAS.IMSS);
+                    int nRespuesta = objBitacora.InsertarDatosFormulario(pSalarioBaseCotizacionMensual, pGenero, Convert.ToInt16(pEdad), Convert.ToInt16(anioAfiliacion));
 
                     //Monto en pesos de la aportación obligatoria inicial mensual
                     Double aObligatoriaIniMensual = Convert.ToDouble(aParametros[13]);

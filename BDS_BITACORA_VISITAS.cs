@@ -97,5 +97,30 @@ namespace CALCULADORA2014
             return liRes;
         }
 
-    }
+
+      public Int32 InsertarDatosFormulario(double nSalarioBase, double nGenero, int nEdad, int nAnio)
+      {
+         String lsQuery = "";
+         Int32 liRes = 0;
+         try
+         {
+            using (SqlConnection cn = new SqlConnection(RNCalculadora.ConnectionString))
+            {
+               cn.Open();
+               lsQuery = "Insert into BDS_GUARDAR_DATOS ([N_SALARIO_BASE],[N_ID_GENERO],[N_EDAD],[N_ANIO],[F_FECH_ACTUAL]) values (" + nSalarioBase + ", " + nGenero + ", " + nEdad + ", " + nAnio + ", GETDATE())";
+               SqlCommand cmd = new SqlCommand(lsQuery, cn);
+               liRes = cmd.ExecuteNonQuery();
+               cn.Close();
+               cn.Dispose();
+            }
+         }
+         catch
+         {
+            liRes = 0;
+         }
+
+         return liRes;
+      }
+
+   }
 }
