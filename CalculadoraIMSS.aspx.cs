@@ -1205,7 +1205,7 @@ namespace CALCULADORA2014
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public static string InsertarEncuestaSatisfaccion(int ValorCarita, string chkInfoBuenaEncuesta1, string chkInfoBuenaEncuesta2, string chkInfoBuenaEncuesta3, string chkInfoBuenaEncuesta4, string txtArea)
+        public static string InsertarEncuestaSatisfaccionBuena(int ValorCarita, string chkInfoBuenaEncuesta1, string chkInfoBuenaEncuesta2, string chkInfoBuenaEncuesta3, string chkInfoBuenaEncuesta4, string txtArea)
         {
 
             CLASESGenerales.CaritaFeliz caritaFeliz = new CLASESGenerales.CaritaFeliz();
@@ -1218,7 +1218,7 @@ namespace CALCULADORA2014
             caritaFeliz.txtArea = txtArea;
 
 
-            //LstEncuesta = new BDS_BITACORA_VISITAS().LLamarOpcionSatisfaccion(encuesta);
+            int valorEncuesta = new BDS_BITACORA_VISITAS().InsertarEncuestaSatisfaccionBuena(ValorCarita, chkInfoBuenaEncuesta1, chkInfoBuenaEncuesta2, chkInfoBuenaEncuesta3, chkInfoBuenaEncuesta4, txtArea);
 
 
             JavaScriptSerializer serializer = new JavaScriptSerializer();
@@ -1226,6 +1226,53 @@ namespace CALCULADORA2014
             return JsonEncuesta;
         }
 
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static string InsertarEncuestaSatisfaccionRegular(int ValorCarita, string chkInfoRegular1, string chkInfoRegular2, string chkInfoRegular3)
+        {
+
+            CLASESGenerales.CaritaFeliz caritaFeliz = new CLASESGenerales.CaritaFeliz();
+
+            //caritaFeliz.ValorCarita = ValorCarita;
+            //caritaFeliz.chkInfoBuenaEncuesta1 = chkInfoBuenaEncuesta1;
+            //caritaFeliz.chkInfoBuenaEncuesta2 = chkInfoBuenaEncuesta2;
+            //caritaFeliz.chkInfoBuenaEncuesta3 = chkInfoBuenaEncuesta3;
+            //caritaFeliz.chkInfoBuenaEncuesta4 = chkInfoBuenaEncuesta3;
+            //caritaFeliz.txtArea = txtArea;
+
+
+            int valorEncuesta = new BDS_BITACORA_VISITAS().InsertarEncuestaSatisfaccionRegular(ValorCarita, chkInfoRegular1, chkInfoRegular2, chkInfoRegular3);
+
+
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            string JsonEncuesta = serializer.Serialize(caritaFeliz);
+            return JsonEncuesta;
+        }
+
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static string InsertarEncuestaSatisfaccionBad(int ValorCarita, string chkInfoBad1, string chkInfoBad2, string chkInfoBad3)
+        {
+
+            CLASESGenerales.CaritaFeliz caritaFeliz = new CLASESGenerales.CaritaFeliz();
+
+            //caritaFeliz.ValorCarita = ValorCarita;
+            //caritaFeliz.chkInfoBuenaEncuesta1 = chkInfoBuenaEncuesta1;
+            //caritaFeliz.chkInfoBuenaEncuesta2 = chkInfoBuenaEncuesta2;
+            //caritaFeliz.chkInfoBuenaEncuesta3 = chkInfoBuenaEncuesta3;
+            //caritaFeliz.chkInfoBuenaEncuesta4 = chkInfoBuenaEncuesta3;
+            //caritaFeliz.txtArea = txtArea;
+
+
+            int valorEncuesta = new BDS_BITACORA_VISITAS().InsertarEncuestaSatisfaccionBad(ValorCarita, chkInfoBad1, chkInfoBad2, chkInfoBad3);
+
+
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            string JsonEncuesta = serializer.Serialize(caritaFeliz);
+            return JsonEncuesta;
+        }
 
     }
 }

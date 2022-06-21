@@ -45,33 +45,43 @@ $('#chkInfoBuenaEncuesta4').click(function () {
     if ($('#chkInfoBuenaEncuesta4').is(':checked')) {
         $("#idTxtArea").prop('disabled', false);
     }
+
+
+
 });
 
 
 $('#chkInfoBuenaEncuesta1').click(function () {
     if ($('#chkInfoBuenaEncuesta1').is(':checked')) {
         $("#idTxtArea").prop('disabled', true);
+        $("#idTxtArea").val("");
     }
+
 });
 
 
 $('#chkInfoBuenaEncuesta2').click(function () {
     if ($('#chkInfoBuenaEncuesta2').is(':checked')) {
         $("#idTxtArea").prop('disabled', true);
+        $("#idTxtArea").val("");
     }
+
 });
 
 
 $('#chkInfoBuenaEncuesta3').click(function () {
     if ($('#chkInfoBuenaEncuesta3').is(':checked')) {
         $("#idTxtArea").prop('disabled', true);
+        $("#idTxtArea").val("");
     }
+
 });
 
 
 function LimpiarModal() {
 
     //alert("limpiar")
+    $("#idTxtArea").val("");
     $("input:radio").removeAttr("checked");
     $('#InfoBuena').hide();
     $('#InfoRegular').hide();
@@ -83,11 +93,11 @@ $('#btnInfoBuenaEnviarEncuesta').click(function () {
 })
 
 $('#btnInfoRegularEnviarEncuesta').click(function () {
-    InsertarEncuestaSatisfaccion(1);
+    InsertarEncuestaSatisfaccion(2);
 })
 
 $('#btnInfoBadEnviarEncuesta').click(function () {
-    InsertarEncuestaSatisfaccion(1);
+    InsertarEncuestaSatisfaccion(0);
 })
 
 function LLamarOpcionSatisfaccion(InformacionCarita) {
@@ -164,53 +174,155 @@ function LLamarOpcionSatisfaccion(InformacionCarita) {
 function InsertarEncuestaSatisfaccion(ValorCarita) {
     var strSerializado = "";
 
-
-    if (ValorCarita == 1) {
-        var captura = new function () {
-            this.ValorCarita = ValorCarita;
-            this.chkInfoBuenaEncuesta1 = $('input[id="chkInfoBuenaEncuesta1"]:checked').text()
-            this.chkInfoBuenaEncuesta2 = $('input[id="chkInfoBuenaEncuesta2"]:checked').text()
-            this.chkInfoBuenaEncuesta3 = $('input[id="chkInfoBuenaEncuesta3"]:checked').text()
-            this.chkInfoBuenaEncuesta4 = $('input[id="chkInfoBuenaEncuesta4"]:checked').text()
-            this.txtArea = $('#idTxtArea').val()
-
-            //this.chkInfoBuenaEncuesta3 = $('#chkInfoBuenaEncuesta3').val();
-        };
-
-        strSerializado = JSON.stringify(captura);
+    if ($("#idTxtArea").val() == "" && $('input[id="chkInfoBuenaEncuesta4"]:checked').text() == "4") {
+        $("#modalComentario").modal('show')
+        return;
     }
 
 
 
 
+    if (ValorCarita == 1) {
+        if ($('#chkInfoBuenaEncuesta1').is(':checked') || $('#chkInfoBuenaEncuesta2').is(':checked') || $('#chkInfoBuenaEncuesta3').is(':checked') || $('#chkInfoBuenaEncuesta4').is(':checked')) {
+            if (ValorCarita == 1) {
+                var captura = new function () {
+                    this.ValorCarita = ValorCarita;
+                    this.chkInfoBuenaEncuesta1 = $('input[id="chkInfoBuenaEncuesta1"]:checked').text()
+                    this.chkInfoBuenaEncuesta2 = $('input[id="chkInfoBuenaEncuesta2"]:checked').text()
+                    this.chkInfoBuenaEncuesta3 = $('input[id="chkInfoBuenaEncuesta3"]:checked').text()
+                    this.chkInfoBuenaEncuesta4 = $('input[id="chkInfoBuenaEncuesta4"]:checked').text()
+                    this.txtArea = $('#idTxtArea').val()
 
-    alert(strSerializado)
-
-    $.ajax({
-        type: "POST",
-        url: "CalculadoraIMSS.aspx/InsertarEncuestaSatisfaccion",
-        contentType: "application/json;charset=utf-8",
-        data: strSerializado,
-        dataType: "json",
-        success: function (data) {
-            var res = $.parseJSON(data.d);
-
-
-            $.each(res, function (index, value) {
-                console.log(value.T_DSC_ENCUESTA)
-            });
-            $("#modalConfirmacion").modal('show')
-            $("#ModalEncuestaSatisfaccion").modal('hide')
-
-            setTimeout(function () {
-                $("#ModalEncuestaSatisfaccion").modal('hide')
-            }, 4000);
+                };
+                strSerializado = JSON.stringify(captura);
 
 
-        },
-        error: function (result) {
-            return result
+
+                $.ajax({
+                    type: "POST",
+                    url: "CalculadoraIMSS.aspx/InsertarEncuestaSatisfaccionBuena",
+                    contentType: "application/json;charset=utf-8",
+                    data: strSerializado,
+                    dataType: "json",
+                    success: function (data) {
+                       
+                      
+                        $("#modalConfirmacion").modal('show')
+                        $("#ModalEncuestaSatisfaccion").modal('hide')
+
+                        setTimeout(function () {
+                            $("#ModalEncuestaSatisfaccion").modal('hide')
+                        }, 4000);
+
+
+                    },
+                    error: function (result) {
+                        return result
+                    }
+                });
+
+            }
         }
-    });
+        else {
+            $("#modalOpcion").modal('show')
+        }
+    }
+
+    if (ValorCarita == 2) {
+        if ($('#chkInfoRegular1').is(':checked') || $('#chkInfoRegular2').is(':checked') || $('#chkInfoRegular3').is(':checked')) {
+            if (ValorCarita == 2) {
+
+                var captura = new function () {
+                    this.ValorCarita = ValorCarita;
+                    this.chkInfoRegular1 = $('input[id="chkInfoRegular1"]:checked').text()
+                    this.chkInfoRegular2 = $('input[id="chkInfoRegular2"]:checked').text()
+                    this.chkInfoRegular3 = $('input[id="chkInfoRegular3"]:checked').text()
+
+                };
+                strSerializado = JSON.stringify(captura);
+
+
+
+                $.ajax({
+                    type: "POST",
+                    url: "CalculadoraIMSS.aspx/InsertarEncuestaSatisfaccionRegular",
+                    contentType: "application/json;charset=utf-8",
+                    data: strSerializado,
+                    dataType: "json",
+                    success: function (data) {
+                       
+
+                        $("#modalConfirmacion").modal('show')
+                        $("#ModalEncuestaSatisfaccion").modal('hide')
+
+                        setTimeout(function () {
+                            $("#ModalEncuestaSatisfaccion").modal('hide')
+                        }, 4000);
+
+
+                    },
+                    error: function (result) {
+                        return result
+                    }
+                });
+
+            }
+        }
+        else {
+            $("#modalOpcion").modal('show')
+        }
+
+    }
+
+
+   
+    if (ValorCarita == 0) {
+        if ($('#chkInfoBad1').is(':checked') || $('#chkInfoBad2').is(':checked') || $('#chkInfoBad3').is(':checked')) {
+            if (ValorCarita == 0) {
+                var captura = new function () {
+                    this.ValorCarita = ValorCarita;
+                    this.chkInfoBad1 = $('input[id="chkInfoBad1"]:checked').text()
+                    this.chkInfoBad2 = $('input[id="chkInfoBad2"]:checked').text()
+                    this.chkInfoBad3 = $('input[id="chkInfoBad3"]:checked').text()
+
+                };
+                strSerializado = JSON.stringify(captura);
+
+
+                $.ajax({
+                    type: "POST",
+                    url: "CalculadoraIMSS.aspx/InsertarEncuestaSatisfaccionBad",
+                    contentType: "application/json;charset=utf-8",
+                    data: strSerializado,
+                    dataType: "json",
+                    success: function (data) {
+                                          
+                        $("#modalConfirmacion").modal('show')
+                        $("#ModalEncuestaSatisfaccion").modal('hide')
+
+                        setTimeout(function () {
+                            $("#ModalEncuestaSatisfaccion").modal('hide')
+                        }, 4000);
+
+
+                    },
+                    error: function (result) {
+                        return result
+                    }
+                });
+            }
+        }
+        else {
+            alert("0")
+            $("#modalOpcion").modal('show')
+        }
+
+    }
+
+
+
+    //alert(strSerializado)
+
+   
 
 }

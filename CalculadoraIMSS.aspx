@@ -1222,27 +1222,25 @@
 
                                 <div class="checkbox-group clearfix" style="font-weight: normal; width: 100%; margin-top: 18px; font-weight: normal; width: 100%; margin-top: 18px;">
 
-                                    <div id="radio">
-                                       
-
-                                            <div class="col-sm-12" style="padding: 5px; padding-right: 5px" align="left">
-                                                <input type="radio" id="chkInfoBuenaEncuesta1" name="radio" style="padding-right: 5px" /><label id="idInfoBuenaEncuesta1" style="font-weight: normal; font-size: small"></label>
-                                            </div>
-                                            <div class="col-sm-12" style="padding: 5px; padding-right: 5px" align="left">
-                                                <input type="radio" id="chkInfoBuenaEncuesta2" name="radio" style="padding-right: 5px" /><label id="idInfoBuenaEncuesta2" style="font-weight: normal; font-size: small"></label>
-                                            </div>
-                                            <div class="col-sm-12" style="padding: 5px; padding-right: 5px" align="left">
-                                                <input type="radio" id="chkInfoBuenaEncuesta3" name="radio" style="padding-right: 5px" /><label id="idInfoBuenaEncuesta3" style="font-weight: normal; font-size: small"></label>
-                                            </div>
-                                            <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;">
-                                                <input type="radio" id="chkInfoBuenaEncuesta4" name="radio" style="padding-right: 5px" /><label id="idInfoBuenaEncuesta4" style="font-weight: normal; font-size: small"></label>
-                                                <fieldset class="CChildFieldset">
-                                                    <label for="idTxtArGenHtml" class="CInfoLabel" style="font-weight: 900; font-size: medium; text-align: center">Deja tu comentario</label><br />
-                                                    <span>
-                                                        <textarea name="nTxtArGenHtml" id="idTxtArea" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;"></textarea></span>
-                                                </fieldset>
-                                            </div>
-                                     
+                                    <div id="radioBuena">
+                                        <div class="col-sm-12" style="padding: 5px; padding-right: 5px">
+                                            <input type="radio" id="chkInfoBuenaEncuesta1" name="radio" style="padding-left: 15px" /><label id="idInfoBuenaEncuesta1" style="font-weight: normal; font-size: 16px"></label>
+                                        </div>
+                                        <div class="col-sm-12" style="padding: 5px; padding-right: 5px">
+                                            <input type="radio" id="chkInfoBuenaEncuesta2" name="radio" style="padding-right: 5px" /><label id="idInfoBuenaEncuesta2" style="font-weight: normal; font-size: 16px"></label>
+                                        </div>
+                                        <div class="col-sm-12" style="padding: 5px; padding-right: 5px">
+                                            <input type="radio" id="chkInfoBuenaEncuesta3" name="radio" style="padding-left: 5px" /><label id="idInfoBuenaEncuesta3" style="padding-right: 5px; font-weight: normal; font-size: 16px"></label>
+                                        </div>
+                                        <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;">
+                                            <input type="radio" id="chkInfoBuenaEncuesta4" name="radio" style="padding-right: 5px" /><label id="idInfoBuenaEncuesta4" style="font-weight: normal; font-size: 16px"></label>
+                                            <fieldset class="CChildFieldset">
+                                                <legend class="label form-control clearfix" style="font-weight: 900; font-size: medium; color: black; border: 0 none; width: 100%; white-space: normal; background-color: transparent; font-size: 18px; box-shadow: inset 0 0 0 rgba(0,0,0,0)">Deja tu comentario</legend>
+                                                <%-- <label for="idTxtArGenHtml" class="label form-control clearfix" style="font-weight: 900; font-size: medium; text-align: center">Deja tu comentario</label><br />--%>
+                                                <span>
+                                                    <textarea name="nTxtArGenHtml" id="idTxtArea" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;"></textarea></span>
+                                            </fieldset>
+                                        </div>
                                     </div>
 
 
@@ -1271,13 +1269,13 @@
                                 </div>
 
 
-                                <div class="row" id="S_A" style="display: block; padding: 10px; margin-top: 25px;" align="left">
+                                <div class="row" id="S_A" style="display: block; padding: 10px; margin-top: 25px;">
                                     <fieldset>
                                         <legend class="label form-control clearfix" style="color: black; border: 0 none; width: 100%; white-space: normal; background-color: transparent; font-size: 18px; margin-bottom: 30px; font-weight: normal; box-shadow: inset 0 0 0 rgba(0,0,0,0)">Mesa de ayuda</legend>
                                         <div class="col-sm-12" style="padding: 5px;" align="left">
                                             <label id="l_l_50" style="font-weight: normal;">gobmx@funcionpublica.gob.mx</label>
                                         </div>
-                                        <div class="col-sm-12" style="padding: 5px;" align="left"><a href="https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFP54" target="_blank" title="Abre en nueva ventana">Denuncia contra servidores públicos</a></div>
+                                        <div class="col-sm-12" style="padding: 5px;"><a href="https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFP54" target="_blank" title="Abre en nueva ventana">Denuncia contra servidores públicos</a></div>
                                     </fieldset>
                                 </div>
                             </fieldset>
@@ -1300,7 +1298,20 @@
 
                                 <div class="checkbox-group clearfix" style="font-weight: normal; width: 100%; margin-top: 18px; font-weight: normal; width: 100%; margin-top: 18px;">
 
-                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;">
+
+                                    <div id="radioRegular">
+                                        <div class="col-sm-12" style="padding: 5px; padding-right: 5px" align="left">
+                                            <input type="radio" id="chkInfoRegular1" name="radio" style="padding-right: 5px" /><label id="idInfoRegular1" style="font-weight: normal; font-size: 16px"></label>
+                                        </div>
+                                        <div class="col-sm-12" style="padding: 5px; padding-right: 5px" align="left">
+                                            <input type="radio" id="chkInfoRegular2" name="radio" style="padding-right: 5px" /><label id="idInfoRegular2" style="font-weight: normal; font-size: 16px"></label>
+                                        </div>
+                                        <div class="col-sm-12" style="padding: 5px; padding-right: 5px" align="left">
+                                            <input type="radio" id="chkInfoRegular3" name="radio" style="padding-right: 5px" /><label id="idInfoRegular3" style="font-weight: normal; font-size: 16px"></label>
+                                        </div>
+                                    </div>
+
+                                    <%--                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;">
 
                                         <input id="chkInfoRegular1" type="checkbox" name="chkInfoRegular1" />
                                         <label id="idInfoRegular1" style="font-weight: normal; font-size: medium"></label>
@@ -1314,7 +1325,7 @@
 
                                         <input id="chkInfoRegular3" type="checkbox" name="chkInfoRegular3" />
                                         <label id="idInfoRegular3" style="font-weight: normal; font-size: medium"></label>
-                                    </div>
+                                    </div>--%>
                                 </div>
 
 
@@ -1347,7 +1358,23 @@
 
                                 <div class="checkbox-group clearfix" style="font-weight: normal; width: 100%; margin-top: 18px; font-weight: normal; width: 100%; margin-top: 18px;">
 
-                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;">
+
+                                    <div id="radioBad">
+
+
+                                        <div class="col-sm-12" style="padding: 5px; padding-right: 5px" align="left">
+                                            <input type="radio" id="chkInfoBad1" name="radio" style="padding-right: 5px" /><label id="idInfoBad1" style="font-weight: normal; font-size: 16px"></label>
+                                        </div>
+                                        <div class="col-sm-12" style="padding: 5px; padding-right: 5px" align="left">
+                                            <input type="radio" id="chkInfoBad2" name="radio" style="padding-right: 5px" /><label id="idInfoBad2" style="font-weight: normal; font-size: 16px"></label>
+                                        </div>
+                                        <div class="col-sm-12" style="padding: 5px; padding-right: 5px" align="left">
+                                            <input type="radio" id="chkInfoBad3" name="radio" style="padding-right: 5px" /><label id="idInfoBad3" style="font-weight: normal; font-size: 16px"></label>
+                                        </div>
+                                    </div>
+
+
+                                    <%--<div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;">
 
                                         <input id="chkInfoBad1" type="checkbox" name="chkInfoBad1" />
                                         <label id="idInfoBad1" style="font-weight: normal; font-size: medium"></label>
@@ -1361,7 +1388,7 @@
 
                                         <input id="chkInfoBad3" type="checkbox" name="chkInfoBad3" />
                                         <label id="idInfoBad3" style="font-weight: normal; font-size: medium"></label>
-                                    </div>
+                                    </div>--%>
                                 </div>
 
 
@@ -1402,12 +1429,6 @@
     <div class="modal fade" id="modalConfirmacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <%--<div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel1">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>--%>
                 <div class="modal-body">
                     <div class="modal-title" style="align-content: center">
                         <div class="col-md-12"></div>
@@ -1428,10 +1449,49 @@
     </div>
 
 
-    <script>
-      
 
-    </script>
+    <!-- Modal Comentario -->
+    <div class="modal fade" id="modalComentario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Comentario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¡Por favor ingresa un comentario!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Opcion -->
+    <div class="modal fade" id="modalOpcion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Comentario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¡Por favor selecciona una opción!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
     <div class="inner-page interior documents">
