@@ -12,6 +12,7 @@ using System.Web.Script.Services;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Globalization;
+using System.Reflection;
 
 namespace CALCULADORA2014
 {
@@ -84,7 +85,7 @@ namespace CALCULADORA2014
         }
 
 
-        public static String Fechcambio1 
+        public static String Fechcambio1
         {
             get;
             set;
@@ -103,7 +104,7 @@ namespace CALCULADORA2014
         }
 
 
-        
+
 
 
         public static double SdoFinalOrig { get; set; }
@@ -164,14 +165,14 @@ namespace CALCULADORA2014
                             case Fcambio1:
                                 Fechcambio1 = parametro.ValorFecha;
                                 hdfFechacambio1.Value = Fechcambio1;
-                               
+
                                 break;
 
                             case Fcambio2:
                                 Fechcambio2 = parametro.ValorFecha;
                                 hdfFechacambio2.Value = Fechcambio2;
                                 break;
-                                
+
 
                             case ApObligatiria:
                                 AOIMensual = parametro.Valor;
@@ -183,7 +184,7 @@ namespace CALCULADORA2014
 
                     }
 
-                  //  GetFechasCambio(Fechcambio1,Fechcambio2);
+                    //  GetFechasCambio(Fechcambio1,Fechcambio2);
 
                     cboAfore.DataSource = CargaAfores();
                     cboAfore.DataValueField = "N_CVE_AFORE";
@@ -304,8 +305,8 @@ namespace CALCULADORA2014
         }
 
         //PGO - ODT- 07 - WebMethod para obtener valores de fechas de cambio y AOI
-        
-      
+
+
 
         [WebMethod]
         public static String GetComisionAfore(String N_CVE_AFORE)
@@ -512,7 +513,7 @@ namespace CALCULADORA2014
                     oRNCalcularora.Tipo = RNCalculadora.TipoConsulta.IMSS;
 
                     //PGO Se asigna el valor obtenido a la variable PMG (Pensión Mínima Garantizada)
-                   // PMG = oRNCalcularora.PMGBD;
+                    // PMG = oRNCalcularora.PMGBD;
 
                     PME = oRNCalcularora.Modelo_mensual_iterativo(pSaldoActualAfore, 0, pGenero, pSalarioBaseCotizacionMensual, pRendimiento, pComisionAfore, pFechaNacimiento, 0, 0, pFechaCorte, pAportacion, 0, 0, pDensidadCotizacion, pEdadRetiro, 2, aObligatoriaIniMensual, tRendimientoMensual, n1, n, fCambio1, fCambio2, n2, n2p, tRendimientoAnual, n3, pEdad, nSemanasCotizadas);
                     PMG = oRNCalcularora.PensionGarantizada;
@@ -570,7 +571,7 @@ namespace CALCULADORA2014
 
                             objCapturCalculadora.DensidadCotizacion = pDensidadCotizacion;
 
-                            List<RNCalculadora.NegativaPension> lstobjCalculoNegativaPension = RNCalculadora.CalculaSaldoAcumuladoNP(objCapturCalculadora,n);
+                            List<RNCalculadora.NegativaPension> lstobjCalculoNegativaPension = RNCalculadora.CalculaSaldoAcumuladoNP(objCapturCalculadora, n);
                             int icont = 0;
 
                             foreach (RNCalculadora.NegativaPension objNegativaPension in lstobjCalculoNegativaPension)
@@ -653,7 +654,7 @@ namespace CALCULADORA2014
                                 objCapturCalculadora.SaldoAcumulado = saldoAcumulado;
                                 objCapturCalculadora.DensidadCotizacion = pDensidadCotizacion;
 
-                                List<RNCalculadora.NegativaPension> lstobjCalculoNegativaPension = RNCalculadora.CalculaSaldoAcumuladoNP(objCapturCalculadora,n);
+                                List<RNCalculadora.NegativaPension> lstobjCalculoNegativaPension = RNCalculadora.CalculaSaldoAcumuladoNP(objCapturCalculadora, n);
                                 int icont = 0;
 
                                 foreach (RNCalculadora.NegativaPension objNegativaPension in lstobjCalculoNegativaPension)
@@ -769,7 +770,7 @@ namespace CALCULADORA2014
 
                             //PGO 03032022
                             SdoFinalOrig = saldoAcumulado;
-                           // ClasSGenerales.SaldoFinalOriginal = saldoAcumulado;
+                            // ClasSGenerales.SaldoFinalOriginal = saldoAcumulado;
 
 
                             OCLASEMT.Numero_ = saldoAcumulado.ToString("c0");
@@ -789,7 +790,7 @@ namespace CALCULADORA2014
                             objCapturCalculadora.DensidadCotizacion = pDensidadCotizacion;
                             objCapturCalculadora.TasaRendimientoMensual = tRendimientoMensual;
 
-                            List<RNCalculadora.NegativaPension> lstobjCalculoNegativaPension = RNCalculadora.CalculaSaldoAcumuladoNP(objCapturCalculadora,n);
+                            List<RNCalculadora.NegativaPension> lstobjCalculoNegativaPension = RNCalculadora.CalculaSaldoAcumuladoNP(objCapturCalculadora, n);
 
 
                             //PGO 03032022
@@ -848,7 +849,7 @@ namespace CALCULADORA2014
 
 
             return sResultados_Calculo + SDatosGrafica + "&" + saldoFinalCompleto;
-           // return sResultados_Calculo + SDatosGrafica;
+            // return sResultados_Calculo + SDatosGrafica;
         }
 
         public static String GetTablaPT()
@@ -952,7 +953,7 @@ namespace CALCULADORA2014
         // PGO OBTENER PARÁMETROS DE SALARIOS MINIMOS DE BD Y GUARDARLOS EN UNA LISTA
         public static List<CLASESGenerales.Parametros> getParametros()
         //public  List<CLASESGenerales.Parametros> getParametros()
-       
+
         {
             var listParametros = new List<CLASESGenerales.Parametros>();
 
@@ -972,14 +973,14 @@ namespace CALCULADORA2014
                     parametro = new CLASESGenerales.Parametros();
                     parametro.Id = Convert.ToInt32(row["N_ID_PAR"]);
                     parametro.Descripcion = Convert.ToString(row["T_DSC_PAR"]);
-                    
+
 
                     if (parametro.Id == 41 || parametro.Id == 42)
                     {
                         parametro.ValorFecha = Convert.ToString(row["T_VALOR_PAR"]);
-                       // this.hdfFechacambio1.TemplateControl = parametro.ValorFecha;
-                     //   hdfFechacambio1.text = parametro.ValorFecha;
-                      //  hdfFechacambio1.
+                        // this.hdfFechacambio1.TemplateControl = parametro.ValorFecha;
+                        //   hdfFechacambio1.text = parametro.ValorFecha;
+                        //  hdfFechacambio1.
                     }
                     else
                     {
@@ -1000,52 +1001,52 @@ namespace CALCULADORA2014
         {
             double sFinal = 0;
             string[] aParametros = sParametros_Calculo.Split('|');
-                Double pSalarioBaseCotizacionMensual = Convert.ToDouble(aParametros[6]);
-                DateTime pFechaNacimiento = Convert.ToDateTime(aParametros[0]);
-                Double pEdad = Convert.ToDouble(aParametros[10]);
-                Double pEdadRetiro = Convert.ToDouble(aParametros[1]);
-                Double pSaldoActualAfore = Convert.ToDouble(aParametros[3]);
-                Double nSemanasCotizadas = Convert.ToDouble(aParametros[2]);
-                Double pDensidadCotizacion = Convert.ToDouble(aParametros[4]);
-                Double pGenero = Convert.ToDouble(aParametros[5]);
-                Double pRendimiento = Convert.ToDouble(aParametros[7]);
-                Double pComisionAfore = Convert.ToDouble(aParametros[8]);
-                Double pAportacion = Convert.ToDouble(aParametros[9]);
-                Double anioAfiliacion = Convert.ToDouble(aParametros[11]);
+            Double pSalarioBaseCotizacionMensual = Convert.ToDouble(aParametros[6]);
+            DateTime pFechaNacimiento = Convert.ToDateTime(aParametros[0]);
+            Double pEdad = Convert.ToDouble(aParametros[10]);
+            Double pEdadRetiro = Convert.ToDouble(aParametros[1]);
+            Double pSaldoActualAfore = Convert.ToDouble(aParametros[3]);
+            Double nSemanasCotizadas = Convert.ToDouble(aParametros[2]);
+            Double pDensidadCotizacion = Convert.ToDouble(aParametros[4]);
+            Double pGenero = Convert.ToDouble(aParametros[5]);
+            Double pRendimiento = Convert.ToDouble(aParametros[7]);
+            Double pComisionAfore = Convert.ToDouble(aParametros[8]);
+            Double pAportacion = Convert.ToDouble(aParametros[9]);
+            Double anioAfiliacion = Convert.ToDouble(aParametros[11]);
 
-                //Monto en pesos de la aportación obligatoria inicial mensual
-                Double aObligatoriaIniMensual = Convert.ToDouble(aParametros[13]);
-                Double tRendimientoMensual = Convert.ToDouble(aParametros[14]);
-                //Número de meses entre la fecha FC1 y la fecha de cálculo
-                Int32 n1 = Convert.ToInt32(aParametros[15]);
-                //Numero de meses que falta para que el trabajador cumpla la edad de retiro
-                Int32 n = Convert.ToInt32(aParametros[16]);
-                //Primera Fecha de Cambio
-                DateTime fCambio1 = Convert.ToDateTime(aParametros[17]);
-                //Segunda Fecha de cambio
-                DateTime fCambio2 = Convert.ToDateTime(aParametros[18]);
+            //Monto en pesos de la aportación obligatoria inicial mensual
+            Double aObligatoriaIniMensual = Convert.ToDouble(aParametros[13]);
+            Double tRendimientoMensual = Convert.ToDouble(aParametros[14]);
+            //Número de meses entre la fecha FC1 y la fecha de cálculo
+            Int32 n1 = Convert.ToInt32(aParametros[15]);
+            //Numero de meses que falta para que el trabajador cumpla la edad de retiro
+            Int32 n = Convert.ToInt32(aParametros[16]);
+            //Primera Fecha de Cambio
+            DateTime fCambio1 = Convert.ToDateTime(aParametros[17]);
+            //Segunda Fecha de cambio
+            DateTime fCambio2 = Convert.ToDateTime(aParametros[18]);
 
-                //PGO - ODT-07 Numero de meses entre FC1 y FC2.
-                Int32 n2 = Convert.ToInt32(aParametros[19]);
+            //PGO - ODT-07 Numero de meses entre FC1 y FC2.
+            Int32 n2 = Convert.ToInt32(aParametros[19]);
 
-                // PGO - ODT-07 - Número de años en los que se dan los incrementos en la  aportación gradual (N2)
-                //Int32 N2_icrementosAP = Convert.ToInt32(aParametros[20]);
+            // PGO - ODT-07 - Número de años en los que se dan los incrementos en la  aportación gradual (N2)
+            //Int32 N2_icrementosAP = Convert.ToInt32(aParametros[20]);
 
-                // PGO - ODT-07 - Número de periodos que se acumularía la aportación despues del último incremento en la aportación gradual
-                Int32 n2p = Convert.ToInt32(aParametros[20]);
+            // PGO - ODT-07 - Número de periodos que se acumularía la aportación despues del último incremento en la aportación gradual
+            Int32 n2p = Convert.ToInt32(aParametros[20]);
 
-                // PGO - ODT-07 - Tasa de rendimiento anual
-                Double tRendimientoAnual = Convert.ToDouble(aParametros[21]);
+            // PGO - ODT-07 - Tasa de rendimiento anual
+            Double tRendimientoAnual = Convert.ToDouble(aParametros[21]);
 
-                //PGO - ODT-07 Numero de meses entre FR y FC2.
-                Int32 n3 = Convert.ToInt32(aParametros[22]);
+            //PGO - ODT-07 Numero de meses entre FR y FC2.
+            Int32 n3 = Convert.ToInt32(aParametros[22]);
 
-                DateTime pFechaCorte = DateTime.Now.Date;
-                RNCalculadora oRNCalcularora = new RNCalculadora();
-                
-                oRNCalcularora.Tipo = RNCalculadora.TipoConsulta.IMSS;
-                sFinal = oRNCalcularora.GetSaldoFinal(pSaldoActualAfore, 0, pGenero, pSalarioBaseCotizacionMensual, pRendimiento, pComisionAfore, pFechaNacimiento, 0, 0, pFechaCorte, pAportacion, 0, 0, pDensidadCotizacion, pEdadRetiro, 3, aObligatoriaIniMensual, tRendimientoMensual, n1,n, fCambio1, fCambio2, n2, n2p, tRendimientoAnual, n3, pEdad);
-                return sFinal;
+            DateTime pFechaCorte = DateTime.Now.Date;
+            RNCalculadora oRNCalcularora = new RNCalculadora();
+
+            oRNCalcularora.Tipo = RNCalculadora.TipoConsulta.IMSS;
+            sFinal = oRNCalcularora.GetSaldoFinal(pSaldoActualAfore, 0, pGenero, pSalarioBaseCotizacionMensual, pRendimiento, pComisionAfore, pFechaNacimiento, 0, 0, pFechaCorte, pAportacion, 0, 0, pDensidadCotizacion, pEdadRetiro, 3, aObligatoriaIniMensual, tRendimientoMensual, n1, n, fCambio1, fCambio2, n2, n2p, tRendimientoAnual, n3, pEdad);
+            return sFinal;
         }
 
         [WebMethod]
@@ -1088,7 +1089,7 @@ namespace CALCULADORA2014
                 Int32 n2 = Convert.ToInt32(aParametros[19]);
 
                 // PGO - ODT-07 - Número de años en los que se dan los incrementos en la  aportación gradual (N2)
-               // Int32 N2_icrementosAP = Convert.ToInt32(aParametros[20]);
+                // Int32 N2_icrementosAP = Convert.ToInt32(aParametros[20]);
 
                 // PGO - ODT-07 - Número de periodos que se acumularía la aportación despues del último incremento en la aportación gradual
                 Int32 n2p = Convert.ToInt32(aParametros[20]);
@@ -1108,90 +1109,122 @@ namespace CALCULADORA2014
                 oRNCalcularora.Tipo = RNCalculadora.TipoConsulta.IMSS;
                 //iData = oRNCalcularora.GetDataSetGraficaUno(pSaldoActualAfore, 0, pGenero, pSalarioBaseCotizacionMensual, pRendimiento, pComisionAfore, pFechaNacimiento, 0, 0, pFechaCorte, pAportacion, 0, 0, pDensidadCotizacion, pEdadRetiro, 3);
                 iData = oRNCalcularora.GetDataSetGraficaUno(pSaldoActualAfore, 0, pGenero, pSalarioBaseCotizacionMensual, pRendimiento, pComisionAfore, pFechaNacimiento, 0, 0, pFechaCorte, pAportacion, 0, 0, pDensidadCotizacion, pEdadRetiro, 3, aObligatoriaIniMensual, tRendimientoMensual, n1, n, fCambio1, fCambio2, n2, n2p, tRendimientoAnual, n3, pEdad);
-                                                                                                                                                                                               
+
                 return iData;
             }
             return iData;
         }
 
-      [WebMethod]
-      public static List<object> getLineChartData2(String sParametros_Calculo)
-      {
-         List<object> iData = new List<object>();
+        [WebMethod]
+        public static List<object> getLineChartData2(String sParametros_Calculo)
+        {
+            List<object> iData = new List<object>();
 
-         string[] aParametros = sParametros_Calculo.Split('|');
-         if (!aParametros[1].Trim().Equals(String.Empty) && !aParametros[2].Trim().Equals(String.Empty) && !aParametros[3].Trim().Equals(String.Empty) && !aParametros[4].Trim().Equals(String.Empty) && !aParametros[5].Trim().Equals(String.Empty)
-             && !aParametros[6].Trim().Equals(String.Empty) && !aParametros[7].Trim().Equals(String.Empty) && !aParametros[8].Trim().Equals(String.Empty) && !aParametros[9].Trim().Equals(String.Empty) && !aParametros[10].Trim().Equals(String.Empty))
-         {
-            Util oUtil = new Util();
-            //Double pN_PORC_ANUAL_SALDO;
-            Double pSalarioBaseCotizacionMensual = Convert.ToDouble(aParametros[6]);
-            DateTime pFechaNacimiento = Convert.ToDateTime(aParametros[0]);
-            Double pEdad = Convert.ToDouble(aParametros[10]);
-            Double pEdadRetiro = Convert.ToDouble(aParametros[1]);
-            Double pSaldoActualAfore = Convert.ToDouble(aParametros[3]);
-            Double nSemanasCotizadas = Convert.ToDouble(aParametros[2]);
-            Double pDensidadCotizacion = Convert.ToDouble(aParametros[4]);
-            Double pGenero = Convert.ToDouble(aParametros[5]);
-            Double pRendimiento = Convert.ToDouble(aParametros[7]);
-            Double pComisionAfore = Convert.ToDouble(aParametros[8]);
-            Double pAportacion = Convert.ToDouble(aParametros[9]);
-            Double anioAfiliacion = Convert.ToDouble(aParametros[11]);
+            string[] aParametros = sParametros_Calculo.Split('|');
+            if (!aParametros[1].Trim().Equals(String.Empty) && !aParametros[2].Trim().Equals(String.Empty) && !aParametros[3].Trim().Equals(String.Empty) && !aParametros[4].Trim().Equals(String.Empty) && !aParametros[5].Trim().Equals(String.Empty)
+                && !aParametros[6].Trim().Equals(String.Empty) && !aParametros[7].Trim().Equals(String.Empty) && !aParametros[8].Trim().Equals(String.Empty) && !aParametros[9].Trim().Equals(String.Empty) && !aParametros[10].Trim().Equals(String.Empty))
+            {
+                Util oUtil = new Util();
+                //Double pN_PORC_ANUAL_SALDO;
+                Double pSalarioBaseCotizacionMensual = Convert.ToDouble(aParametros[6]);
+                DateTime pFechaNacimiento = Convert.ToDateTime(aParametros[0]);
+                Double pEdad = Convert.ToDouble(aParametros[10]);
+                Double pEdadRetiro = Convert.ToDouble(aParametros[1]);
+                Double pSaldoActualAfore = Convert.ToDouble(aParametros[3]);
+                Double nSemanasCotizadas = Convert.ToDouble(aParametros[2]);
+                Double pDensidadCotizacion = Convert.ToDouble(aParametros[4]);
+                Double pGenero = Convert.ToDouble(aParametros[5]);
+                Double pRendimiento = Convert.ToDouble(aParametros[7]);
+                Double pComisionAfore = Convert.ToDouble(aParametros[8]);
+                Double pAportacion = Convert.ToDouble(aParametros[9]);
+                Double anioAfiliacion = Convert.ToDouble(aParametros[11]);
 
-            //Monto en pesos de la aportación obligatoria inicial mensual
-            Double aObligatoriaIniMensual = Convert.ToDouble(aParametros[13]);
-            Double tRendimientoMensual = Convert.ToDouble(aParametros[14]);
-            //Número de meses entre la fecha FC1 y la fecha de cálculo
-            Int32 n1 = Convert.ToInt32(aParametros[15]);
-            //Numero de meses que falta para que el trabajador cumpla la edad de retiro
-            Int32 n = Convert.ToInt32(aParametros[16]);
-            //Primera Fecha de Cambio
-            DateTime fCambio1 = Convert.ToDateTime(aParametros[17]);
-            //Segunda Fecha de cambio
-            DateTime fCambio2 = Convert.ToDateTime(aParametros[18]);
+                //Monto en pesos de la aportación obligatoria inicial mensual
+                Double aObligatoriaIniMensual = Convert.ToDouble(aParametros[13]);
+                Double tRendimientoMensual = Convert.ToDouble(aParametros[14]);
+                //Número de meses entre la fecha FC1 y la fecha de cálculo
+                Int32 n1 = Convert.ToInt32(aParametros[15]);
+                //Numero de meses que falta para que el trabajador cumpla la edad de retiro
+                Int32 n = Convert.ToInt32(aParametros[16]);
+                //Primera Fecha de Cambio
+                DateTime fCambio1 = Convert.ToDateTime(aParametros[17]);
+                //Segunda Fecha de cambio
+                DateTime fCambio2 = Convert.ToDateTime(aParametros[18]);
 
-            //PGO - ODT-07 Numero de meses entre FC1 y FC2.
-            Int32 n2 = Convert.ToInt32(aParametros[19]);
+                //PGO - ODT-07 Numero de meses entre FC1 y FC2.
+                Int32 n2 = Convert.ToInt32(aParametros[19]);
 
-            // PGO - ODT-07 - Número de años en los que se dan los incrementos en la  aportación gradual (N2)
-            // Int32 N2_icrementosAP = Convert.ToInt32(aParametros[20]);
+                // PGO - ODT-07 - Número de años en los que se dan los incrementos en la  aportación gradual (N2)
+                // Int32 N2_icrementosAP = Convert.ToInt32(aParametros[20]);
 
-            // PGO - ODT-07 - Número de periodos que se acumularía la aportación despues del último incremento en la aportación gradual
-            Int32 n2p = Convert.ToInt32(aParametros[20]);
+                // PGO - ODT-07 - Número de periodos que se acumularía la aportación despues del último incremento en la aportación gradual
+                Int32 n2p = Convert.ToInt32(aParametros[20]);
 
-            // PGO - ODT-07 - Tasa de rendimiento anual
-            Double tRendimientoAnual = Convert.ToDouble(aParametros[21]);
+                // PGO - ODT-07 - Tasa de rendimiento anual
+                Double tRendimientoAnual = Convert.ToDouble(aParametros[21]);
 
-            //PGO - ODT-07 Numero de meses entre FR y FC2.
-            Int32 n3 = Convert.ToInt32(aParametros[22]);
-            //Pension deseada
-            Double nPensionDeseada = Convert.ToDouble(aParametros[23]);
+                //PGO - ODT-07 Numero de meses entre FR y FC2.
+                Int32 n3 = Convert.ToInt32(aParametros[22]);
+                //Pension deseada
+                Double nPensionDeseada = Convert.ToDouble(aParametros[23]);
 
-            DateTime pFechaCorte = DateTime.Now.Date;
-            RNCalculadora oRNCalcularora = new RNCalculadora();
-            //Boolean bAlcanzaPMG = false;
-            //Double Tr = 100;                                
+                DateTime pFechaCorte = DateTime.Now.Date;
+                RNCalculadora oRNCalcularora = new RNCalculadora();
+                //Boolean bAlcanzaPMG = false;
+                //Double Tr = 100;                                
 
 
-            oRNCalcularora.Tipo = RNCalculadora.TipoConsulta.IMSS;
-            iData = oRNCalcularora.GetDataSetGraficaDos(pSaldoActualAfore, 0, pGenero, pSalarioBaseCotizacionMensual, pRendimiento, pComisionAfore, pFechaNacimiento, 0, 0, pFechaCorte, pAportacion, 0, 0, pDensidadCotizacion, pEdadRetiro, 3, aObligatoriaIniMensual, tRendimientoMensual, n1, n, fCambio1, fCambio2, n2, n2p, tRendimientoAnual, n3, nSemanasCotizadas, pEdad, nPensionDeseada);
+                oRNCalcularora.Tipo = RNCalculadora.TipoConsulta.IMSS;
+                iData = oRNCalcularora.GetDataSetGraficaDos(pSaldoActualAfore, 0, pGenero, pSalarioBaseCotizacionMensual, pRendimiento, pComisionAfore, pFechaNacimiento, 0, 0, pFechaCorte, pAportacion, 0, 0, pDensidadCotizacion, pEdadRetiro, 3, aObligatoriaIniMensual, tRendimientoMensual, n1, n, fCambio1, fCambio2, n2, n2p, tRendimientoAnual, n3, nSemanasCotizadas, pEdad, nPensionDeseada);
 
+                return iData;
+            }
             return iData;
-         }
-         return iData;
-      }
+        }
+
+
+
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         public static string LLamarOpcionSatisfaccion(int ValorCarita)
         {
-            
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            string theJson = serializer.Serialize("HOLA");
+            List<CLASESGenerales.Encuesta> LstEncuesta = new List<CLASESGenerales.Encuesta>();
+            CLASESGenerales.Encuesta encuesta = new CLASESGenerales.Encuesta();
+            encuesta.N_ID_PREGUNTA = ValorCarita;
 
-            return theJson;
+
+            LstEncuesta = new BDS_BITACORA_VISITAS().LLamarOpcionSatisfaccion(encuesta);
+
+
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            string JsonEncuesta = serializer.Serialize(LstEncuesta);
+            return JsonEncuesta;
         }
 
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static string InsertarEncuestaSatisfaccion(int ValorCarita, string chkInfoBuenaEncuesta1, string chkInfoBuenaEncuesta2, string chkInfoBuenaEncuesta3, string chkInfoBuenaEncuesta4, string txtArea)
+        {
+
+            CLASESGenerales.CaritaFeliz caritaFeliz = new CLASESGenerales.CaritaFeliz();
+
+            caritaFeliz.ValorCarita = ValorCarita;
+            caritaFeliz.chkInfoBuenaEncuesta1 = chkInfoBuenaEncuesta1;
+            caritaFeliz.chkInfoBuenaEncuesta2 = chkInfoBuenaEncuesta2;
+            caritaFeliz.chkInfoBuenaEncuesta3 = chkInfoBuenaEncuesta3;
+            caritaFeliz.chkInfoBuenaEncuesta4 = chkInfoBuenaEncuesta3;
+            caritaFeliz.txtArea = txtArea;
+
+
+            //LstEncuesta = new BDS_BITACORA_VISITAS().LLamarOpcionSatisfaccion(encuesta);
+
+
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            string JsonEncuesta = serializer.Serialize(caritaFeliz);
+            return JsonEncuesta;
+        }
 
 
     }

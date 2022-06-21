@@ -53,7 +53,7 @@ namespace CALCULADORA2014
 
         }
 
-        public class CLASETipoTrabajador 
+        public class CLASETipoTrabajador
         {
             private Int32 N_CVE_T_TRABAJADOR = 0;
 
@@ -102,5 +102,34 @@ namespace CALCULADORA2014
             }
 
         }
+
+        public class Encuesta
+        {
+            //Parámetros para consultar la encuesta de satisfacción
+            public int N_ID_ENCUESTA { get; set; }
+            public int N_ID_PREGUNTA { get; set; }
+            public string T_DSC_ENCUESTA { get; set; }
+            public int VIG_FLAG { get; set; }
+            public string F_FECH_INI_VIG { get; set; }
+            public string F_FECH_FIN_VIG { get; set; }
+            public string MyProperty { get; set; }
+
+        }
+
+
+        public class CaritaFeliz
+        {
+            //Parámetros para consultar la encuesta de satisfacción
+            public int ValorCarita { get; set; }
+            public string chkInfoBuenaEncuesta1 { get; set; }
+            public string chkInfoBuenaEncuesta2 { get; set; }
+            public string chkInfoBuenaEncuesta3 { get; set; }
+            public string chkInfoBuenaEncuesta4 { get; set; }
+            public string txtArea { get; set; }
+
+
+        }
+
+
     }
 }

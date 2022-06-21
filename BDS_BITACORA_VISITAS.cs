@@ -5,6 +5,7 @@ using System.Web;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Data;
+using System.Reflection;
 
 namespace CALCULADORA2014
 {
@@ -13,7 +14,7 @@ namespace CALCULADORA2014
         public Double ID_BITACORA_V;
         public String ID_SESION;
         public String IP;
-        public Int32  CALCULADORA_ACTUAL;
+        public Int32 CALCULADORA_ACTUAL;
 
         /// <summary>
         /// Lista de las calculadoras
@@ -23,6 +24,10 @@ namespace CALCULADORA2014
         public const Int32 ISSSTE = 3;
 
         private string ConnectionString;
+
+        public BDS_BITACORA_VISITAS()
+        {
+        }
 
         /// <summary>
         /// Llena la cadena de conexion y la calculadora actual
@@ -49,7 +54,9 @@ namespace CALCULADORA2014
                     cn.Close();
                     cn.Dispose();
                 }
-            }catch{
+            }
+            catch
+            {
                 liRes = 0;
             }
 
@@ -98,29 +105,138 @@ namespace CALCULADORA2014
         }
 
 
-      public Int32 InsertarDatosFormulario(double nSalarioBase, double nGenero, int nEdad, int nAnio)
-      {
-         String lsQuery = "";
-         Int32 liRes = 0;
-         try
-         {
-            using (SqlConnection cn = new SqlConnection(RNCalculadora.ConnectionString))
+        public Int32 InsertarDatosFormulario(double nSalarioBase, double nGenero, int nEdad, int nAnio)
+        {
+            String lsQuery = "";
+            Int32 liRes = 0;
+            try
             {
-               cn.Open();
-               lsQuery = "Insert into BDS_GUARDAR_DATOS ([N_SALARIO_BASE],[N_ID_GENERO],[N_EDAD],[N_ANIO],[F_FECH_ACTUAL]) values (" + nSalarioBase + ", " + nGenero + ", " + nEdad + ", " + nAnio + ", GETDATE())";
-               SqlCommand cmd = new SqlCommand(lsQuery, cn);
-               liRes = cmd.ExecuteNonQuery();
-               cn.Close();
-               cn.Dispose();
+                using (SqlConnection cn = new SqlConnection(RNCalculadora.ConnectionString))
+                {
+                    cn.Open();
+                    lsQuery = "Insert into BDS_GUARDAR_DATOS ([N_SALARIO_BASE],[N_ID_GENERO],[N_EDAD],[N_ANIO],[F_FECH_ACTUAL]) values (" + nSalarioBase + ", " + nGenero + ", " + nEdad + ", " + nAnio + ", GETDATE())";
+                    SqlCommand cmd = new SqlCommand(lsQuery, cn);
+                    liRes = cmd.ExecuteNonQuery();
+                    cn.Close();
+                    cn.Dispose();
+                }
             }
-         }
-         catch
-         {
-            liRes = 0;
-         }
+            catch
+            {
+                liRes = 0;
+            }
 
-         return liRes;
-      }
+            return liRes;
+        }
 
-   }
+
+        public int InsertarEncuestaSatisfaccion(int ValorCarita, string chkInfoBuenaEncuesta1, string chkInfoBuenaEncuesta2, string chkInfoBuenaEncuesta3, string chkInfoBuenaEncuesta4, string txtArea)
+        {
+            String lsQuery = "";
+            int liRes = 0;
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(RNCalculadora.ConnectionString))
+                {
+                    cn.Open();
+                    lsQuery = "INSERT INTO BDS_RESPUESTA_ENCUESTA VALUES (" + nSalarioBase + ", " + ValorCarita + ", " + nEdad + ", " + nAnio + ", GETDATE())";
+                    SqlCommand cmd = new SqlCommand(lsQuery, cn);
+                    liRes = cmd.ExecuteNonQuery();
+                    cn.Close();
+                    cn.Dispose();
+                }
+            }
+            catch
+            {
+                liRes = 0;
+            }
+
+            return liRes;
+        }
+
+
+        public List<CLASESGenerales.Encuesta> LLamarOpcionSatisfaccion(CLASESGenerales.Encuesta encuesta)
+        {
+            List<CLASESGenerales.Encuesta> LstEncuesta = new List<CLASESGenerales.Encuesta>();
+            String lsQuery = "";
+            DataTable dtEncuestas = new DataTable();
+
+
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(RNCalculadora.ConnectionString))
+                {
+                    cn.Open();
+                    lsQuery = "SELECT  * from [dbo].[BDS_C_CAMPOS_ENCUESTA] WHERE VIG_FLAG=1 AND N_ID_PREGUNTA=" + encuesta.N_ID_PREGUNTA;
+                    SqlCommand cmd = new SqlCommand(lsQuery, cn);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.SelectCommand = cmd;
+                    da.Fill(dtEncuestas);
+                }
+
+                LstEncuesta = DataTableToList<CLASESGenerales.Encuesta>(dtEncuestas).ToList();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            return LstEncuesta;
+        }
+
+
+        private readonly IDictionary<Type, ICollection<PropertyInfo>> _Properties =
+      new Dictionary<Type, ICollection<PropertyInfo>>();
+
+
+        public IEnumerable<T> DataTableToList<T>(DataTable table) where T : class, new()
+        {
+            try
+            {
+                var objType = typeof(T);
+                ICollection<PropertyInfo> properties;
+
+                lock (_Properties)
+                {
+                    if (!_Properties.TryGetValue(objType, out properties))
+                    {
+                        properties = objType.GetProperties().Where(property => property.CanWrite).ToList();
+                        _Properties.Add(objType, properties);
+                    }
+                }
+
+                var list = new List<T>(table.Rows.Count);
+
+                foreach (var row in table.AsEnumerable())
+                {
+                    var obj = new T();
+
+                    foreach (var prop in properties)
+                    {
+                        try
+                        {
+                            var propType = Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType;
+                            var safeValue = row[prop.Name] == null ? null : Convert.ChangeType(row[prop.Name], propType);
+
+                            prop.SetValue(obj, safeValue, null);
+                        }
+                        catch
+                        {
+                            continue;
+                        }
+                    }
+
+                    list.Add(obj);
+                }
+
+                return list;
+            }
+            catch
+            {
+                return Enumerable.Empty<T>();
+            }
+        }
+
+    }
 }

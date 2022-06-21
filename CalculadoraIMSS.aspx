@@ -29,6 +29,7 @@
     <script>
         $(window).load(function () {
             $('#cargando').hide();
+            $("#idTxtArea").prop('disabled', true);
         });
     </script>
 
@@ -1220,41 +1221,53 @@
 
 
                                 <div class="checkbox-group clearfix" style="font-weight: normal; width: 100%; margin-top: 18px; font-weight: normal; width: 100%; margin-top: 18px;">
-                                    <div class="col-sm-12" style="padding: 5px;" align="left">
-                                        <label style="font-weight: normal;"></label>
-                                        <input id="radEncA_D1" type="checkbox" name="A_D" value="1" />
-                                        Que la información proporcionada sea más clara y completa
+
+                                    <div id="radio">
+                                       
+
+                                            <div class="col-sm-12" style="padding: 5px; padding-right: 5px" align="left">
+                                                <input type="radio" id="chkInfoBuenaEncuesta1" name="radio" style="padding-right: 5px" /><label id="idInfoBuenaEncuesta1" style="font-weight: normal; font-size: small"></label>
+                                            </div>
+                                            <div class="col-sm-12" style="padding: 5px; padding-right: 5px" align="left">
+                                                <input type="radio" id="chkInfoBuenaEncuesta2" name="radio" style="padding-right: 5px" /><label id="idInfoBuenaEncuesta2" style="font-weight: normal; font-size: small"></label>
+                                            </div>
+                                            <div class="col-sm-12" style="padding: 5px; padding-right: 5px" align="left">
+                                                <input type="radio" id="chkInfoBuenaEncuesta3" name="radio" style="padding-right: 5px" /><label id="idInfoBuenaEncuesta3" style="font-weight: normal; font-size: small"></label>
+                                            </div>
+                                            <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;">
+                                                <input type="radio" id="chkInfoBuenaEncuesta4" name="radio" style="padding-right: 5px" /><label id="idInfoBuenaEncuesta4" style="font-weight: normal; font-size: small"></label>
+                                                <fieldset class="CChildFieldset">
+                                                    <label for="idTxtArGenHtml" class="CInfoLabel" style="font-weight: 900; font-size: medium; text-align: center">Deja tu comentario</label><br />
+                                                    <span>
+                                                        <textarea name="nTxtArGenHtml" id="idTxtArea" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;"></textarea></span>
+                                                </fieldset>
+                                            </div>
+                                     
                                     </div>
-                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;" align="left">
-                                        <label style="font-weight: normal;"></label>
-                                        <input id="radEncA_D2" type="checkbox" name="A_D" value="2" />
-                                        Tiempo de respuesta
+
+
+                                    <%--                                    <div class="col-sm-12" style="padding: 5px;" align="left">
+
+                                        <input id="chkInfoBuenaEncuesta1" type="checkbox" name="chkInfoBuenaEncuesta1" />
+                                        <label id="idInfoBuenaEncuesta1" style="font-weight: normal; font-size: medium"></label>
                                     </div>
-                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;" align="left">
-                                        <label style="font-weight: normal;"></label>
-                                        <input id="radEncA_D3" type="checkbox" name="A_D" value="3" />
-                                        Costo elevado
+                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;">
+
+                                        <input id="chkInfoBuenaEncuesta2" type="checkbox" name="chkInfoBuenaEncuesta2" />
+                                        <label id="idInfoBuenaEncuesta2" style="font-weight: normal; font-size: medium"></label>
                                     </div>
-                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;" align="left">
-                                        <label style="font-weight: normal;"></label>
-                                        <input id="radEncA_D4" type="checkbox" name="A_D" value="4" />
-                                        Número de requisitos
-                                    </div>
-                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;" align="left">
-                                        <label style="font-weight: normal;"></label>
-                                        <input id="radEncA_D5" type="checkbox" name="A_D" value="5" />
-                                        Que se pueda realizar 100% en Internet
-                                    </div>
-                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;" align="left">
-                                        <label style="font-weight: normal;"></label>
-                                        <input id="radEncA_D6" type="checkbox" name="A_D" value="6" />
-                                        El formato es muy difícil de llenar
-                                    </div>
-                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;" align="left">
-                                        <label style="font-weight: normal;"></label>
-                                        <input id="radEncA_D7" type="checkbox" name="A_D" value="7" />
-                                        El formulario web es muy difícil de llenar
-                                    </div>
+                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;">
+
+                                        <input id="chkInfoBuenaEncuesta3" type="checkbox" name="chkInfoBuenaEncuesta3" />
+                                        <label id="idInfoBuenaEncuesta3" style="font-weight: normal; font-size: medium"></label>
+                                    </div>--%>
+                                    <%--    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;" style="align-content: center">
+                                        <fieldset class="CChildFieldset">
+                                            <label for="idTxtArGenHtml" class="CInfoLabel" style="font-weight: 900; font-size: medium; text-align: center">Deja tu comentario</label><br />
+                                            <span>
+                                                <textarea name="nTxtArGenHtml" id="idTxtArGenHtml" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;" alt="Ingresa el texto"></textarea></span>
+                                        </fieldset>
+                                    </div>--%>
                                 </div>
 
 
@@ -1272,7 +1285,7 @@
                                 <div class="col-md-12 respuesta"></div>
                                 <div class="modal-footer">
                                     <div class="row" style="padding: 10px;" align="center">
-                                        <button id="btnEnviarEncuesta" style="color: #fff; background-color: #9D2449; border-color: #9D2449;" type="button" class="btn btn-primary">Enviar encuesta</button>
+                                        <button id="btnInfoBuenaEnviarEncuesta" style="color: #fff; background-color: #9D2449; border-color: #9D2449;" type="button" class="btn btn-primary">Enviar encuesta</button>
                                     </div>
 
                                 </div>
@@ -1287,17 +1300,21 @@
 
                                 <div class="checkbox-group clearfix" style="font-weight: normal; width: 100%; margin-top: 18px; font-weight: normal; width: 100%; margin-top: 18px;">
 
-                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;" align="left">
-                                        <label style="font-weight: normal;"></label>
-                                        <input id="radEncA_D3" type="checkbox" name="A_D" value="3" />
-                                        Costo elevado
-                                    </div>
-                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;" align="left">
-                                        <label style="font-weight: normal;"></label>
-                                        <input id="radEncA_D4" type="checkbox" name="A_D" value="4" />
-                                        Número de requisitos
-                                    </div>
+                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;">
 
+                                        <input id="chkInfoRegular1" type="checkbox" name="chkInfoRegular1" />
+                                        <label id="idInfoRegular1" style="font-weight: normal; font-size: medium"></label>
+                                    </div>
+                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;">
+
+                                        <input id="chkInfoRegular2" type="checkbox" name="chkInfoRegular2" />
+                                        <label id="idInfoRegular2" style="font-weight: normal; font-size: medium"></label>
+                                    </div>
+                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;">
+
+                                        <input id="chkInfoRegular3" type="checkbox" name="chkInfoRegular3" />
+                                        <label id="idInfoRegular3" style="font-weight: normal; font-size: medium"></label>
+                                    </div>
                                 </div>
 
 
@@ -1307,7 +1324,7 @@
                                         <div class="col-sm-12" style="padding: 5px;" align="left">
                                             <label id="l_l_501" style="font-weight: normal;">gobmx@funcionpublica.gob.mx</label>
                                         </div>
-                                        <div class="col-sm-12" style="padding: 5px;" align="left"><a href="https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFP54" target="_blank" title="Abre en nueva ventana">Denuncia contra servidores públicos</a></div>
+                                        <div class="col-sm-12" style="padding: 5px;"><a href="https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFP54" target="_blank" title="Abre en nueva ventana">Denuncia contra servidores públicos</a></div>
                                     </fieldset>
                                 </div>
                             </fieldset>
@@ -1316,7 +1333,7 @@
                                 <div class="col-md-12 respuesta"></div>
                                 <div class="modal-footer">
                                     <div class="row" style="padding: 10px;" align="center">
-                                        <button style="color: #fff; background-color: #9D2449; border-color: #9D2449;" type="button" class="btn btn-primary">Enviar encuesta</button>
+                                        <button id="btnInfoRegularEnviarEncuesta" style="color: #fff; background-color: #9D2449; border-color: #9D2449;" type="button" class="btn btn-primary">Enviar encuesta</button>
                                     </div>
 
                                 </div>
@@ -1329,20 +1346,21 @@
 
 
                                 <div class="checkbox-group clearfix" style="font-weight: normal; width: 100%; margin-top: 18px; font-weight: normal; width: 100%; margin-top: 18px;">
-                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;" align="left">
-                                        <label style="font-weight: normal;"></label>
-                                        <input id="radEncA_D5" type="checkbox" name="A_D" value="5" />
-                                        Que se pueda realizar 100% en Internet
+
+                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;">
+
+                                        <input id="chkInfoBad1" type="checkbox" name="chkInfoBad1" />
+                                        <label id="idInfoBad1" style="font-weight: normal; font-size: medium"></label>
                                     </div>
-                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;" align="left">
-                                        <label style="font-weight: normal;"></label>
-                                        <input id="radEncA_D6" type="checkbox" name="A_D" value="6" />
-                                        El formato es muy difícil de llenar
+                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;">
+
+                                        <input id="chkInfoBad2" type="checkbox" name="chkInfoBad2" />
+                                        <label id="idInfoBad2" style="font-weight: normal; font-size: medium"></label>
                                     </div>
-                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;" align="left">
-                                        <label style="font-weight: normal;"></label>
-                                        <input id="radEncA_D7" type="checkbox" name="A_D" value="7" />
-                                        El formulario web es muy difícil de llenar
+                                    <div class="col-sm-12" style="padding: 5px; font-weight: normal; width: 100%; margin-top: 10px;">
+
+                                        <input id="chkInfoBad3" type="checkbox" name="chkInfoBad3" />
+                                        <label id="idInfoBad3" style="font-weight: normal; font-size: medium"></label>
                                     </div>
                                 </div>
 
@@ -1362,7 +1380,7 @@
                                 <div class="col-md-12"></div>
                                 <div class="modal-footer">
                                     <div class="row" style="padding: 10px;" align="center">
-                                        <button style="color: #fff; background-color: #9D2449; border-color: #9D2449;" type="button" class="btn btn-primary">Enviar encuesta</button>
+                                        <button id="btnInfoBadEnviarEncuesta" style="color: #fff; background-color: #9D2449; border-color: #9D2449;" type="button" class="btn btn-primary">Enviar encuesta</button>
                                     </div>
 
                                 </div>
