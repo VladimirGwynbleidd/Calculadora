@@ -312,6 +312,9 @@
     <Content Include="imagenes\hombre.gif" />
     <Content Include="imagenes\hombre.png" />
     <Content Include="imagenes\ico-satisfation-good %281%29.jpg" />
+    <Content Include="imagenes\IconsModal\ico-satifation-bad-2.svg" />
+    <Content Include="imagenes\IconsModal\ico-satifation-good-2.svg" />
+    <Content Include="imagenes\IconsModal\ico-satifation-regular-2.svg" />
     <Content Include="imagenes\IconsModal\ico-satisfaction-bad.jpg" />
     <Content Include="imagenes\IconsModal\ico-satisfaction-regular.jpg" />
     <Content Include="imagenes\IconsModal\ico-satisfation-good.svg" />
