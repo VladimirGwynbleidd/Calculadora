@@ -1229,7 +1229,7 @@ namespace CALCULADORA2014
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public static string InsertarEncuestaSatisfaccionRegular(int ValorCarita, string chkInfoRegular1, string chkInfoRegular2, string chkInfoRegular3)
+        public static string InsertarEncuestaSatisfaccionRegular(int ValorCarita, string chkInfoRegular1, string chkInfoRegular2, string chkInfoRegular3, string chkInfoRegular4, string idTxtAreaRegular)
         {
 
             CLASESGenerales.CaritaFeliz caritaFeliz = new CLASESGenerales.CaritaFeliz();
@@ -1242,7 +1242,7 @@ namespace CALCULADORA2014
             //caritaFeliz.txtArea = txtArea;
 
 
-            int valorEncuesta = new BDS_BITACORA_VISITAS().InsertarEncuestaSatisfaccionRegular(ValorCarita, chkInfoRegular1, chkInfoRegular2, chkInfoRegular3);
+            int valorEncuesta = new BDS_BITACORA_VISITAS().InsertarEncuestaSatisfaccionRegular(ValorCarita, chkInfoRegular1, chkInfoRegular2, chkInfoRegular3, chkInfoRegular4, idTxtAreaRegular);
 
 
             JavaScriptSerializer serializer = new JavaScriptSerializer();
@@ -1253,7 +1253,7 @@ namespace CALCULADORA2014
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public static string InsertarEncuestaSatisfaccionBad(int ValorCarita, string chkInfoBad1, string chkInfoBad2, string chkInfoBad3)
+        public static string InsertarEncuestaSatisfaccionBad(int ValorCarita, string chkInfoBad1, string chkInfoBad2, string chkInfoBad3, string chkInfoBad4, string idTxtAreaBad)
         {
 
             CLASESGenerales.CaritaFeliz caritaFeliz = new CLASESGenerales.CaritaFeliz();
@@ -1266,7 +1266,7 @@ namespace CALCULADORA2014
             //caritaFeliz.txtArea = txtArea;
 
 
-            int valorEncuesta = new BDS_BITACORA_VISITAS().InsertarEncuestaSatisfaccionBad(ValorCarita, chkInfoBad1, chkInfoBad2, chkInfoBad3);
+            int valorEncuesta = new BDS_BITACORA_VISITAS().InsertarEncuestaSatisfaccionBad(ValorCarita, chkInfoBad1, chkInfoBad2, chkInfoBad3, chkInfoBad4, idTxtAreaBad);
 
 
             JavaScriptSerializer serializer = new JavaScriptSerializer();

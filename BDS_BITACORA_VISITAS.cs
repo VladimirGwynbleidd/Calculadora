@@ -157,7 +157,14 @@ namespace CALCULADORA2014
                 }
 
 
-                T_DSC_ENCUESTA = txtArea == null && txtArea == string.Empty ? null : txtArea;
+                if (txtArea == string.Empty)
+                    T_DSC_ENCUESTA = "NULL";
+                else
+                    T_DSC_ENCUESTA = txtArea;
+
+
+
+                //T_DSC_ENCUESTA = txtArea == null && txtArea == string.Empty ? "NULL" : txtArea;
 
                 using (SqlConnection cn = new SqlConnection(RNCalculadora.ConnectionString))
                 {
@@ -178,7 +185,7 @@ namespace CALCULADORA2014
         }
 
 
-        public int InsertarEncuestaSatisfaccionRegular(int ValorCarita, string chkInfoRegular1, string chkInfoRegular2, string chkInfoRegular3)
+        public int InsertarEncuestaSatisfaccionRegular(int ValorCarita, string chkInfoRegular1, string chkInfoRegular2, string chkInfoRegular3, string chkInfoRegular4, string idTxtAreaRegular)
         {
             String lsQuery = "";
             int liRes = 0;
@@ -199,12 +206,23 @@ namespace CALCULADORA2014
                 {
                     N_ID_PREGUNTA = chkInfoRegular3;
                 }
+                else if (chkInfoRegular4 != string.Empty && chkInfoRegular4 != null)
+                {
+                    N_ID_PREGUNTA = chkInfoRegular4;
+                }
 
+                if (idTxtAreaRegular == string.Empty)
+                    T_DSC_ENCUESTA = "NULL";
+                else
+                    T_DSC_ENCUESTA = idTxtAreaRegular;
+
+
+                //T_DSC_ENCUESTA = idTxtAreaRegular == null && idTxtAreaRegular == string.Empty ? "NULL" : idTxtAreaRegular;
 
                 using (SqlConnection cn = new SqlConnection(RNCalculadora.ConnectionString))
                 {
                     cn.Open();
-                    lsQuery = "INSERT INTO BDS_RESPUESTA_ENCUESTA VALUES (" + N_ID_PREGUNTA + ", " + ValorCarita + ", NULL, GETDATE())";
+                    lsQuery = "INSERT INTO BDS_RESPUESTA_ENCUESTA VALUES (" + N_ID_PREGUNTA + ", " + ValorCarita + ", '" + T_DSC_ENCUESTA + "', GETDATE())";
                     SqlCommand cmd = new SqlCommand(lsQuery, cn);
                     liRes = cmd.ExecuteNonQuery();
                     cn.Close();
@@ -219,7 +237,7 @@ namespace CALCULADORA2014
             return liRes;
         }
 
-        public int InsertarEncuestaSatisfaccionBad(int ValorCarita, string chkInfoBad1, string chkInfoBad2, string chkInfoBad3)
+        public int InsertarEncuestaSatisfaccionBad(int ValorCarita, string chkInfoBad1, string chkInfoBad2, string chkInfoBad3, string chkInfoBad4, string idTxtAreaBad)
         {
             String lsQuery = "";
             int liRes = 0;
@@ -240,13 +258,23 @@ namespace CALCULADORA2014
                 {
                     N_ID_PREGUNTA = chkInfoBad3;
                 }
+                else if (idTxtAreaBad != string.Empty && idTxtAreaBad != null)
+                {
+                    N_ID_PREGUNTA = chkInfoBad4;
+                }
 
 
-                
+                if (idTxtAreaBad == string.Empty)
+                    T_DSC_ENCUESTA = "NULL";
+                else
+                    T_DSC_ENCUESTA = idTxtAreaBad;
+
+
+
                 using (SqlConnection cn = new SqlConnection(RNCalculadora.ConnectionString))
                 {
                     cn.Open();
-                    lsQuery = "INSERT INTO BDS_RESPUESTA_ENCUESTA VALUES (" + N_ID_PREGUNTA + ", " + ValorCarita + ", NULL, GETDATE())";
+                    lsQuery = "INSERT INTO BDS_RESPUESTA_ENCUESTA VALUES (" + N_ID_PREGUNTA + ", " + ValorCarita + ", '" + T_DSC_ENCUESTA + "', GETDATE())";
                     SqlCommand cmd = new SqlCommand(lsQuery, cn);
                     liRes = cmd.ExecuteNonQuery();
                     cn.Close();
